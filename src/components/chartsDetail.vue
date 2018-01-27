@@ -2,7 +2,7 @@
 	<div class="charts-detail">
 		<header id="header" class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>首页</span></a>
-			<h1 class="mui-title">标题标题</h1>
+			<h1 class="mui-title">辅料库存情况</h1>
 		</header>
 		<div class="echarts_div">
 			<p>材料库存占比</p>
@@ -107,7 +107,7 @@
 
 <style scoped lang="scss">
 	@import "~common/scss/baseColorSize";
-	@import "~common/scss/backheader";
+	@import "~common/scss/resetMui";
 	.charts-detail {
 		top: 0;
 		bottom: 0;

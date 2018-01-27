@@ -18,7 +18,7 @@
 		<a class=" saoma">
 			<span class="iconfont icon-saoma"></span>
 		</a>
-		<router-link to="/main/messageindex">
+		<router-link to="/main/found">
 			<span class=" iconfont icon-pengyouquan"></span>
 			<span class="text">发现</span>
 		</router-link>

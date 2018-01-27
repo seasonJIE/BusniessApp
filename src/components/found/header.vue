@@ -2,17 +2,14 @@
 	<div class="header">
 		<a class="btn left_btn search"></a>
 		<div class="tab">
-			<router-link to="/main/messageindex/message">
-				消息<span class="mui-badge" v-if="false">9</span>
+			<router-link to="/main/found/news">
+				新闻<span class="mui-badge" v-if="false">9</span>
 			</router-link>
-			<router-link to="/main/messageindex/mail">
-				邮箱<span class="mui-badge" v-if="true">9</span>
+			<router-link to="/main/found/workring">
+				工作圈<span class="mui-badge" v-if="true">9</span>
 			</router-link>
-			<router-link to="/main/messageindex/message">
-				任务<span class="point" v-if="true"></span>
-			</router-link>
-			<router-link to="/main/messageindex/addresslist">
-				通讯录<span class="mui-badge" v-if="false">9</span>
+			<router-link to="/main/found/activity">
+				活动
 			</router-link>
 		</div>
 		<a class="btn right_btn plus"></a>
