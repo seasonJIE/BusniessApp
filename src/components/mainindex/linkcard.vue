@@ -6,18 +6,24 @@
 			</p>
 			<ul class="list">
 				<li>
-					<p class="content">上烟集团张先生张小姐什么什么审批示例</p>
+					<i></i>
+					<p class="content">您有<span>5件</span>关于中心代码更新的通知</p>
 					<p class="time">2018-01-02</p>
 				</li>
 				<li>
-					<p class="content">上烟集团张先生张小姐什么什么审批示例</p>
+					<i></i>
+					<p class="content">您有<span>3件</span>社保基数的通知</p>
 					<p class="time">2018-01-02</p>
 				</li>
 			</ul>
 		</div>
-		<div class="card"  @click="routerto('/main/mainindex/chartsdetail')">
+		<div class="card" @click="routerto('/main/mainindex/chartsdetail')">
+			<p class="title">辅料库存情况</p>
+			<div id="echart_div" class="echarts_div" ref='mychart1'></div>
+		</div>
+		<div class="card" @click="routerto('/main/mainindex/chartsdetail')">
 			<p class="title">审查注释</p>
-			<div id="echart_div" ref='mychart'></div>
+			<div id="echart_div" class="echarts_div" ref='mychart2'></div>
 		</div>
 		<a class="user-defined">
 			<span></span>
@@ -32,22 +38,69 @@
 		name: 'Linkcard',
 		data() {
 			return {
-				option: {
-					title: {
-						text: 'ECharts 入门示例'
-					},
-					tooltip: {},
-					legend: {
-						data: ['销量']
+				option2: {
+					grid:{
+						left:'15%',
+						right:'10%',
+						top:'10%',
+						bottom:'20%'
 					},
 					xAxis: {
-						data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+						data: ["硬盒", "条盒", "纸箱", "内装纸", "薄膜", "滤棒"]
 					},
 					yAxis: {},
 					series: [{
 						name: '销量',
 						type: 'bar',
 						data: [5, 20, 36, 10, 10, 20]
+					}]
+				},
+				option1: {
+					tooltip: {
+						trigger: 'item',
+						formatter: "{a} <br/>{b} : {c} ({d}%)"
+					},
+					legend: {
+						orient: 'vertical',
+						itemWidth:10,
+						itemHeight:10,
+						right: '3%',
+						data: ['硬盒', '条盒', '纸箱', '内装纸', '内衬纸','薄膜','滤棒']
+					},
+					series: [{
+						name: '辅料库存情况',
+						type: 'pie',
+						radius: '60%',
+						center: ['40%', '50%'],
+						data: [{
+								value: 335,
+								name: '硬盒'
+							},
+							{
+								value: 310,
+								name: '条盒'
+							},
+							{
+								value: 234,
+								name: '纸箱'
+							},
+							{
+								value: 135,
+								name: '内装纸'
+							},
+							{
+								value: 154,
+								name: '内衬纸'
+							},
+							{
+								value: 482,
+								name: '薄膜'
+							},
+							{
+								value: 548,
+								name: '滤棒'
+							}
+						]
 					}]
 				}
 			}
@@ -57,22 +110,10 @@
 		},
 		methods: {
 			makeEchartCard() {
-				this.chart = echarts.init(this.$refs.mychart);
-				var option = {
-					legend: {
-						data: ['销量']
-					},
-					xAxis: {
-						data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-					},
-					yAxis: {},
-					series: [{
-						name: '销量',
-						type: 'bar',
-						data: [5, 20, 36, 10, 10, 20]
-					}]
-				};
-				this.chart.setOption(option);
+				this.chart1 = echarts.init(this.$refs.mychart1);
+				this.chart1.setOption(this.option1);
+				this.chart2 = echarts.init(this.$refs.mychart2);
+				this.chart2.setOption(this.option2);
 			}
 		}
 	}
@@ -81,54 +122,76 @@
 <style scoped lang="scss">
 	@import "~common/scss/baseColorSize";
 	.linkcard {
+		position:relative;
+		z-index:1;
 		overflow: hidden;
-		padding-bottom: 2.5rem;
 		.card {
-			margin: 0.3rem auto;
-			width: 96%;
-			border-radius: 0.3rem;
+			margin: 0.5rem auto;
 			background: #fff;
 			text-align: left;
 			p {
 				margin: 0;
 			}
 			.title {
+				overflow: hidden;
 				text-indent: 0.2rem;
 				font-size: $small-textsize;
 				color: $grey-textcolor;
+				.more {
+					margin-right: 0.5rem;
+					float: right;
+					color: $grey-textcolor;
+				}
 			}
 			.list {
 				margin: auto;
 				width: 94%;
 				list-style: none;
 				li {
+					position: relative;
 					padding: 0.2rem;
 					padding-left: 1rem;
 					border-bottom: 1px solid #ddd;
 					.content {
 						font-size: $normal-textsize;
 						color: $black-textcolor;
+						span {
+							color: $light-color;
+						}
 					}
 					.time {
 						font-size: $min-textsize;
-						color: grey-textcolor;
+						color: $grey-textcolor;
 					}
 				}
 				li:last-child {
 					border: none;
+				}
+				i {
+					position: absolute;
+					top: 0.65rem;
+					left: 0.5rem;
+					display: inline-block;
+					height: 0.2rem;
+					width: 0.2rem;
+					background: #000000;
+					border-radius: 1rem;
 				}
 			}
 			#echart_div {
 				width: 100%;
 				height: 8rem;
 			}
+			.echarts_div {
+				z-index: 1;
+			}
 		}
 		.user-defined {
 			margin: 1.5rem auto;
 			display: block;
 			overflow: hidden;
-			min-height:2rem;
-			width:2rem;
+			min-height: 2rem;
+			width: 2rem;
 			span {
 				margin: auto;
 				display: block;
@@ -140,7 +203,7 @@
 			p {
 				margin: 0;
 				font-size: 11px;
-				color:$grey-textcolor;
+				color: $grey-textcolor;
 			}
 		}
 	}

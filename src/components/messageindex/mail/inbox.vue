@@ -1,36 +1,50 @@
 <template>
 	<div class="inbox">
 		<header id="header" class="mui-bar mui-bar-nav">
-		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>邮箱</span></a>
-		    <h1 class="mui-title">收件箱</h1>
-		    <a class="right write"></a>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>邮箱</span></a>
+			<h1 class="mui-title">收件箱</h1>
+			<router-link to="/main/messageindex/mail/inbox/newmail" class="right write"></router-link>
 		</header>
-		<div class="search_div">
-			<input type="text"/>
-		</div>
-		<div class="content">
-			<div class="item">
-				<i class="tips circle"></i>
-				<p>
-					<span class="name">王伟</span>
-					<span class="icon"></span>
-					<span class="time">下午15:30</span>
-					
-				</p>
-				<p class="texttitle"><i class="resend"></i>王伟2018.01.03工作周报</p>
-				<p>本周工作任务主要为:1、项目1;2、项目2;2、项目2;自我评估:良好;</p>
+		
+		<div class="wrapper" ref="wrapper">
+			<div class="content">
+				<div class="search_div">
+					<input type="text" />
+				</div>
+				<router-link to="/main/messageindex/mail/inbox/maildetail" tag="div" class="item">
+					<i class="tips circle"></i>
+					<p>
+						<span class="name">王伟</span>
+						<span class="icon light"></span>
+						<span class="time">下午15:30</span>
+
+					</p>
+					<p class="texttitle"><i class="resend"></i>王伟2018.01.03工作周报</p>
+					<p>本周工作任务主要为:1、项目1;2、项目2;2、项目2;自我评估:良好;</p>
+				</router-link>
+				<div class="item">
+					<i class="tips others"></i>
+					<p>
+						<span class="name">王伟</span>
+						<span class="icon"></span>
+						<span class="time">下午15:30</span>
+					</p>
+					<p class="texttitle"><i class="resend"></i>王伟2018.01.03工作周报</p>
+					<p>本周工作任务主要为:1、项目1;2、项目2;2、项目2;自我评估:良好;</p>
+				</div>
+				<div class="item">
+					<i class="tips others"></i>
+					<p>
+						<span class="name">王伟</span>
+						<span class="icon"></span>
+						<span class="time">下午15:30</span>
+					</p>
+					<p class="texttitle"><i class="resend"></i>王伟2018.01.03工作周报</p>
+					<p>本周工作任务主要为:1、项目1;2、项目2;2、项目2;自我评估:良好;</p>
+				</div>
 			</div>
-			<div class="item">
-				<i class="tips others"></i>
-				<p>
-					<span class="name">王伟</span>
-					<span class="time">下午15:30</span>
-					<span class="icon"></span>
-				</p>
-				<p class="texttitle"><i class="resend"></i>王伟2018.01.03工作周报</p>
-				<p>本周工作任务主要为:1、项目1;2、项目2;2、项目2;自我评估:良好;</p>
-			</div>
 		</div>
+
 		<div class="bottom">
 			<a>编辑</a>
 			<p>刚刚更新</p>
@@ -39,8 +53,14 @@
 </template>
 
 <script>
+	import BScroll from 'better-scroll'
 	export default {
-		name:'Inbox'
+		name: 'Inbox',
+		mounted() {
+			this.$nextTick(() => {
+				this.scroll = new BScroll(this.$refs.wrapper, {})
+			})
+		}
 	}
 </script>
 
@@ -53,16 +73,21 @@
 		left: 0;
 		right: 0;
 		background: #fff;
+		.wrapper {
+			position: absolute;
+			top: 2.2rem;
+			bottom: 40px;
+			width: 100%;
+		}
 		.write {
-		    background:url(../../../assets/icon/write.png) no-repeat center ;
-		    background-size:100%;
+			background: url(../../../assets/icon/write.png) no-repeat center;
+			background-size: 100%;
 		}
 		.search_div {
-			margin-top:44px;
-			overflow:hidden;
-			background:#e8ecef;
-			height:1.9rem;
-			line-height:1.7rem;
+			overflow: hidden;
+			background: #e8ecef;
+			height: 1.9rem;
+			line-height: 1.7rem;
 			input {
 				margin: 0;
 				padding: 0;
@@ -71,15 +96,12 @@
 				line-height: 1rem;
 				width: 92%;
 				border: 1px solid #dce1e4;
-				border-radius: 1rem;
 				background: url(../../../assets/icon/search.png) no-repeat 0.3rem center #fff;
 				background-size: 0.8rem;
 				font-size: $min-textsize;
 			}
 		}
 		.content {
-			padding-bottom: 44px;
-			
 			.item {
 				position: relative;
 				padding: 0.5rem 0.8rem 0.5rem 1.8rem;
@@ -91,11 +113,8 @@
 					position: absolute;
 					top: 0.8rem;
 					left: 1.2rem;
-
 					height: 0.3rem;
 					width: 0.3rem;
-				
-					
 					&.circle {
 						background: red;
 						border-radius: 1rem;
@@ -132,12 +151,15 @@
 					background: url(../../../assets/icon/jumpto.png) no-repeat center;
 					background-size: 100%;
 				}
+				.icon.light {
+					background: url(../../../assets/icon/mail-lighticon.png) no-repeat center;
+					background-size: 0.6rem;
+				}
 				.texttitle {
 					position: relative;
 					overflow: initial;
 					font-size: $small-textsize;
 					color: $black-textcolor;
-					
 					.resend {
 						position: absolute;
 						left: -0.7rem;
@@ -147,12 +169,10 @@
 						width: 0.6rem;
 						background: url(../../../assets/icon/mail_resend.png) no-repeat center;
 						background-size: 100%;
-						
 					}
 				}
 			}
 		}
-		
 		.bottom {
 			position: fixed;
 			bottom: 0;
@@ -161,7 +181,6 @@
 			height: 40px;
 			line-height: 40px;
 			background: $maincolor;
-			
 			a {
 				position: absolute;
 				left: 0;

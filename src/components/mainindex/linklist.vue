@@ -5,33 +5,33 @@
 				<span class="text">邮件</span>
 			</li>
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/培训.png"></img>
-				<span class="text">邮件</span>
-			</li>
-			<li>
 				<img class="icon-png" src="../../assets/首页应用图标/日报.png"></img>
-				<span class="text">邮件</span>
-			</li>
-			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/绩效.png"></img>
-				<span class="text">邮件</span>
-			</li>
-			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/审批.png"></img>
-				<span class="text">邮件</span>
-			</li>
-			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/统计分析.png"></img>
-				<span class="text">邮件</span>
+				<span class="text">日报</span>
 			</li>
 			<li>
 				<img class="icon-png" src="../../assets/首页应用图标/工资.png"></img>
-				<span class="text">邮件</span>
+				<span class="text">工资</span>
 			</li>
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/全部.png"></img>
-				<span class="text">邮件</span>
+				<img class="icon-png" src="../../assets/首页应用图标/培训.png"></img>
+				<span class="text">培训</span>
 			</li>
+			<li>
+				<img class="icon-png" src="../../assets/首页应用图标/审批.png"></img>
+				<span class="text">审批</span>
+			</li>
+			<li>
+				<img class="icon-png" src="../../assets/首页应用图标/绩效.png"></img>
+				<span class="text">绩效</span>
+			</li>
+			<li>
+				<img class="icon-png" src="../../assets/首页应用图标/统计分析.png"></img>
+				<span class="text">统计</span>
+			</li>
+			<router-link tag="li" to="/main/mainindex/allapp">
+				<img class="icon-png" src="../../assets/首页应用图标/全部.png"></img>
+				<span class="text">全部</span>
+			</router-link>
 		</ul>
 </template>
 
@@ -44,7 +44,6 @@
 <style scoped lang="scss">
 @import "~common/scss/baseColorSize";
 	.linklist {
-		margin-top: 86px;
 		overflow: hidden;
 		display: flex;
 		justify-content: flex-start;

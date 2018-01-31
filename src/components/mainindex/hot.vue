@@ -1,47 +1,74 @@
 <template>
-	<div class="bg_fixed hide">
+	<div class="bg_fixed" v-if="isShow=='true'">
 		<div class="hotpoint">
-			<a class="close"></a>
-			<img src="../../assets/logo.png">
+			<a class="close" @click="hidehot"></a>
+			<img src="../../assets/tu.jpg">
 			<p>上海烟草开展基层单位党组织书记党性锻炼专题培训班</p>
 		</div>
+		<div class="bg"></div>
 	</div>
 </template>
 
 <script>
+	import Bus from 'components/vmbus.js'
 	export default {
-		name:'Hotpoint'
+		name: 'Hotpoint',
+		data(){
+			return {
+				isShow:'false'
+			}
+		},
+		mounted() {
+			Bus.$on('hot', (e) => {
+				this.isShow = e
+			})
+		},
+		methods:{
+			hidehot() {
+				this.isShow = 'false';
+			}
+		}
+
 	}
 </script>
 
 <style scoped lang="scss">
 	@import "~common/scss/baseColorSize";
-	
 	.bg_fixed {
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		z-index: 99;
+		z-index: 100;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		align-content: center;
-		background: rgba(0,0,0,0.5);
+		.bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			background: rgba(0, 0, 0, 0.5);
+		}
 		.hotpoint {
-			position:relative;
+			position: relative;
+			z-index: 2;
 			width: 96%;
 			background: #fff;
 			border-radius: 0.4rem;
 			img {
 				height: 9rem;
 				width: 100%;
+				border-radius: 0.4rem 0.4rem 0 0;
 			}
 			p {
 				margin: 0;
 				padding: 0.45rem;
-				font-size:$large-textsize;
+				font-size: $large-textsize;
 				text-align: left;
 				color: $maincolor;
 			}
@@ -58,7 +85,7 @@
 			}
 		}
 		&.hide {
-		display: none;
+			display: none;
 		}
 	}
 </style>

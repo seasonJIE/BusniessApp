@@ -32,18 +32,14 @@
 <style scoped lang="scss">
 @import "~common/scss/baseColorSize";
 	.search_div {
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
 		background: #fff;
 		
 		.top_search {
-			position:fixed;
+			position:absolute;
 			display: flex;
-			padding:10px;
+			padding:0.5rem;
 			overflow: hidden;
-			height: 44px;
+			height: 2.2rem;
 			width: 100%;
 			background: #f1f4f5;
 			border-bottom: 1px solid #e3e6e6;
@@ -53,36 +49,37 @@
 				padding-left: 1.4rem;
 				margin: 0;
 				margin-right: 0.5rem;
-				height: 22px;
-				line-height: 22px;
-				font-size: 10px;
+				height: 1.2rem;
+				line-height: 1.2rem;
+				font-size: 0.6rem;
 				border: 1px solid #d0d4d5;
 				border-radius: 0.8rem;
 				color: $grey-textcolor;
 				background: url(../../assets/icon/search.png) no-repeat 0.3rem center #fff;
-				background-size: 20px;
+				background-size: 1rem;
 			}
 			.cancel {
+				margin-top: 0.1rem;
 				display: block;
 				width: 1.5rem;
-				height: 22px;
-				line-height: 22px;
-				font-size: $small-textsize;
+				height: 1.1rem;
+				line-height: 1.1rem;
+				font-size: $normal-textsize;
 				color: #05c3f9;
 			}
 			.clear {
 				position: absolute;
 				display: block;
-				top: 14px;
+				top: 0.75rem;
 				right: 2.6rem;
-				height: 14px;
-				width: 14px;
+				height: 0.7rem;
+				width: 0.7rem;
 				background: url(../../assets/icon/del.png) no-repeat center;
 				background-size: 100%;
 			}
 		}
 		.search_content {
-			margin-top: 44px;
+			margin-top: 2.2rem;
 			overflow: hidden;
 			background: #fff;
 			

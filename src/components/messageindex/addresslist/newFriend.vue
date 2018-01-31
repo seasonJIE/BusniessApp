@@ -17,7 +17,7 @@
 		<p class="title">新的朋友</p>
 		<div class="newfriends">
 			<div class="item">
-				<img src="../../../assets/icon/home-icon.png"/>
+				<img src="../../../assets/head.png"/>
 				<div class="text">
 					<p>王伟</p>
 					<p>您好，我是王伟</p>
@@ -65,7 +65,6 @@
 				line-height: 1rem;
 				width: 92%;
 				border: 1px solid #dce1e4;
-				border-radius: 1rem;
 				background: url(../../../assets/icon/search.png) no-repeat 0.3rem center #fff;
 				background-size: 0.8rem;
 				font-size: $min-textsize;
@@ -87,7 +86,7 @@
 					margin: auto;
 					height: 1.3rem;
 					width: 1.3rem;
-					background: url(../../../assets/首页应用图标/日报.png) no-repeat center;
+					background: url(../../../assets/message/addresslist.png) no-repeat center;
 					background-size: 100%;
 				}
 				p {
@@ -123,6 +122,8 @@
 					float: left;
 					height: 1.3rem;
 					width: 1.3rem;
+					background: #ddd;
+					border-radius: 0.2rem;
 				}
 				.text {
 					margin-left: 0.5rem;

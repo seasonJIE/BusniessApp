@@ -17,7 +17,6 @@
 		watch: {
 			'$route' (to, from) {
 				let isBack = this.$router.isBack;
-				
 				const toDepth = to.path.split('/').length;
 				const fromDepth = from.path.split('/').length;
 				this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
@@ -37,6 +36,11 @@
 	
 	.router {
 		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
 		width: 100%;
 		transition: all .5s ease;
 	}

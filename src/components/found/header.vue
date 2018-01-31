@@ -1,18 +1,18 @@
 <template>
 	<div class="header">
-		<a class="btn left_btn search"></a>
+		<a class="btn left_btn" v-if="typeobj.leftShow" :class="typeobj.leftclassobj"></a>
 		<div class="tab">
-			<router-link to="/main/found/news">
+			<router-link to="/main/found/news" @click.native="btnchange">
 				新闻<span class="mui-badge" v-if="false">9</span>
 			</router-link>
-			<router-link to="/main/found/workring">
+			<router-link to="/main/found/workring" @click.native="btnchange">
 				工作圈<span class="mui-badge" v-if="true">9</span>
 			</router-link>
-			<router-link to="/main/found/activity">
+			<router-link to="/main/found/activity" @click.native="btnchange">
 				活动
 			</router-link>
 		</div>
-		<a class="btn right_btn plus"></a>
+		<a class="btn right_btn" v-if="typeobj.rightShow" :class="typeobj.rightclassobj"></a>
 	</div>
 </template>
 
@@ -21,7 +21,43 @@
 		name: 'Header',
 		data(){
 			return {
-				
+				typeobj: {},
+				news: {
+					leftShow: true,
+					leftclassobj: {
+						search: true
+					},
+					rightShow: false,
+				},
+				workring: {
+					leftShow: false,
+					rightShow: true,
+					rightclassobj: {
+						photo: true
+					}
+				},
+				activity: {
+					leftShow: false,
+					rightShow: false
+				}
+			}
+		},
+		mounted(){
+			this.btnchange();
+		},
+		methods:{
+			btnchange() {
+				switch(this.$route.name) {
+					case 'News':
+						this.typeobj = this.news;
+						break;
+					case 'Workring':
+						this.typeobj = this.workring;
+						break;
+					case 'Activity':
+						this.typeobj = this.activity;
+						break;
+				}
 			}
 		}
 	}
@@ -30,19 +66,19 @@
 <style scoped lang="scss">
 	@import "~common/scss/baseColorSize";
 	.header {
-		position: fixed;
+		position: absolute;
 		z-index:99;
 		overflow: hidden;
 		top: 0;
 		left: 0;
-		padding:0 10px;
-		height: 38px;
+		padding:0 0.5rem;
+		height: 1.9rem;
 		width: 100%;
 		background: $maincolor;
 		.tab {
 			position: absolute;
-			left: 40px;
-			right: 40px;
+			left: 2rem;
+			right: 2rem;
 			height: 100%;
 			list-style: none;
 			display: flex;
@@ -53,34 +89,34 @@
 				display:inline-block;
 				margin: 0 0.5rem;
 				height: 100%;
-				line-height: 38px;
+				line-height: 1.9rem;
 				/*width: 20%;*/
 				font-size: $normal-textsize;
-				color: #fff;
+				color: $header-textcolor;
 				.mui-badge {
 					position: absolute;
-					top: 5px;
+					top: 0.25rem;
 					right: -0.3rem;
 					padding: 0;
-					width: 14px;
-					height: 14px;
-					line-height: 14px;
+					width: 0.7rem;
+					height: 0.7rem;
+					line-height: 0.7rem;
 					color: #fff;
 					background: red;
-					font-size: 10px;
+					font-size: 0.5rem;
 				}
 				.point {
 					position: absolute;
-					top: 10px;
-					right: -5px;
+					top: 0.5rem;
+					right: -0.25rem;
 					display: block;
-					height:5px;
-					width:5px;
+					height:0.25rem;
+					width:0.25rem;
 					background: red;
-					border-radius: 5px;
+					border-radius: 0.25rem;
 				}
 				&.router-link-active {
-					color: #05c3f9;
+					color: $header-activetextcolor;
 				}
 				&.router-link-active:after {
 					content: '';
@@ -88,15 +124,15 @@
 					bottom: 0;
 					left:0;
 					width: 100%;
-					height: 2px;
-					background: #05c3f9;
+					height: 0.1rem;
+					background:$header-activetextcolor;
 				}
 			}
 		}
 		.btn {
-			margin-top: 9px;
-			padding: 10px;
-			font-size: 24px;
+			margin-top: 0.45rem;
+			padding: 0.5rem;
+			font-size: 1.2rem;
 			position: relative;
 			z-index: 20;
 			&.left_btn {
@@ -111,6 +147,10 @@
 			}
 			&.search {
 				background: url(../../assets/icon/message-search.png) no-repeat center;
+				background-size: 100%;
+			}
+			&.photo {
+				background: url(../../assets/icon/workring_r.png) no-repeat center;
 				background-size: 100%;
 			}
 		}

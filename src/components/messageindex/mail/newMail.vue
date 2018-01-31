@@ -46,7 +46,7 @@
 		background: #fff;
 		
 		ul {
-			margin-top:44px;
+			margin-top:2.2rem;
 			li {
 				position: relative;
 				overflow: hidden;

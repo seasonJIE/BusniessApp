@@ -1,9 +1,9 @@
 <template>
 	<div class="main-header">
 		<div class="topbar">
-			<a class="icon_btn hot"></a>
+			<a class="icon_btn hot" @click="hotshow"></a>
 			<div class="search_btn" @click="routerto('/main/mainindex/search')">
-				<span></span>
+				<span><a>搜索</a></span>
 			</div>
 			<a class="icon_btn plus"></a>
 		</div>
@@ -12,35 +12,46 @@
 </template>
 
 <script>
+	import Bus from 'components/vmbus.js'
 	export default {
-		name: 'MainHeader'
+		name: 'MainHeader',
+		methods:{
+			vmbus(msgid,msg) {
+				Bus.$emit(msgid,msg)
+			},
+			hotshow() {
+				this.vmbus('hot','true');
+			}
+		}
 	}
 </script>
 
 <style scoped lang="scss">
 	@import "~common/scss/baseColorSize.scss";
 	.main-header {
-		position: fixed;
+		position: absolute;
 		overflow: hidden;
 		top: 0;
 		z-index: 10;
 		right: 0;
 		left: 0;
+		height:4.3rem;
 		padding-right: 10px;
 		padding-left: 10px;
-		background: $maincolor;
+		background: url(../../assets/headerbg.jpg) no-repeat center;
+		background-size:100%;
 		.topbar {
 			overflow:hidden;
-			height:38px;
+			height:1.9rem;
 			.icon_btn {
-				margin-top:9px;
-				padding-right: 10px;
-				padding-left: 10px;
-				font-size: 24px;
+				margin-top:0.45rem;
+				padding-right: 0.5rem;
+				padding-left: 0.5rem;
+				font-size: 1.2rem;
 				position: relative;
 				z-index: 20;
-				padding-top: 10px;
-				padding-bottom: 10px;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
 				
 				&.hot {
 					float: left;
@@ -60,26 +71,37 @@
 				align-items: center;
 				padding: 0;
 				margin: 0;
-				right: 40px;
-				left: 40px;
+				right:2rem;
+				left: 2rem;
 				width: auto;
-				height: 38px;
+				height: 1.9rem;
 				span{
+					position: relative;
 					margin: auto;
 					display: block;
-					height: 22px;
-					width: 74%;
-					border-radius: 10px;
-					background: url(../../assets/icon/search.png) no-repeat 6px center  #296082;
-					background-size: 16px;
+					height: 1.1rem;
+					line-height: 1.1rem;
+					width: 70%;
+					background: rgba(255,255,255,0.3);
+					background-size: 0.8rem;
+					color: #fff;
+					opacity: 0.8;
+					font-size: 0.6rem;
+					a {
+						display: inline-block;
+						padding-left: 0.9rem;
+						background: url(../../assets/icon/search.png) no-repeat left center;
+						background-size: 0.9rem;
+						color: #ddd;
+					}
 				}
 			}
 		}
 		.text {
 			margin: 0;
-			height: 48px;
-			line-height: 48px;
-			color: #05c3f9;
+			height: 2.4rem;
+			line-height: 2.4rem;
+			color: #fff;
 			font-size: 0.9rem;
 		}
 	}

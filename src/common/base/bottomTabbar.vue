@@ -15,14 +15,14 @@
 			</span>
 			<span class="text">消息</span>
 		</router-link>
-		<a class=" saoma">
+		<router-link to="/main/code/code" class=" saoma">
 			<span class="iconfont icon-saoma"></span>
-		</a>
+		</router-link>
 		<router-link to="/main/found">
 			<span class=" iconfont icon-pengyouquan"></span>
 			<span class="text">发现</span>
 		</router-link>
-		<router-link to="/main/messageindex">
+		<router-link to="/main/mine">
 			<span class=" iconfont icon-wode"></span>
 			<span class="text">我的</span>
 		</router-link>
@@ -31,15 +31,18 @@
 
 <script>
 	export default {
-		name: 'BottomTabbar'
+		name: 'BottomTabbar',
+		methods:{
+			
+		}
 	}
 </script>
 
 <style scoped lang="scss">
 	@import "~common/scss/baseColorSize.scss";
 	.bottomTabbar {
-		z-index: 10;
-		position: fixed;
+		z-index: 99;
+		position: absolute;
 		table-layout: fixed;
 		bottom: 0;
 		right: 0;
@@ -48,7 +51,8 @@
 		padding: 0;
 		width: 100%;
 		height: 50px;
-		background: $maincolor;
+		background: #fff;
+		border-top:1px solid #ddd;
 		a {
 			display: table-cell;
 			overflow: hidden;
@@ -58,9 +62,9 @@
 			vertical-align: middle;
 			white-space: nowrap;
 			text-overflow: ellipsis;
-			color: #99bcd1;
+			color: #535456;
 			&.router-link-active {
-				color: #05c3f9;
+				color: #4788b0;
 			}
 			.text {
 				font-size: 11px;
@@ -112,8 +116,8 @@
 				height: 100%;
 				width: 100%;
 				.home-icon {
-					height: 40px;
-					width: 40px;
+					height: 2rem;
+					width: 2rem;
 					background: url(../../assets/icon/home-icon.png) no-repeat center;
 					background-size: 100%;
 				}
