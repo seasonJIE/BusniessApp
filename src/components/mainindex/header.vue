@@ -36,9 +36,9 @@
 		right: 0;
 		left: 0;
 		height:4.3rem;
-		padding-right: 10px;
-		padding-left: 10px;
-		background: url(../../assets/headerbg.jpg) no-repeat center;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
+		background: url(~assets/headerbg.png) no-repeat center;
 		background-size:100%;
 		.topbar {
 			overflow:hidden;

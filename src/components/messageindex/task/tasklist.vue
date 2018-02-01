@@ -6,32 +6,44 @@
 			<a class="right text">已办</a>
 		</header>
 		<div class="list">
-			<div class="item active">
+			<div class="item" v-for="item in itemlist" :class="{active:item.isSelected}">
 				<p><span class="left">卓威</span><span class="right">10:00</span></p>
 				<p>关于中心代码库更新的通知</p>
 				<p>信息中心运维科</p>
-				<i class="mui-icon mui-icon-checkmarkempty"></i>
-			</div>
-			<div class="item">
-				<p><span class="left">卓威</span><span class="right">10:00</span></p>
-				<p>关于中心代码库更新的通知</p>
-				<p>信息中心运维科</p>
-				<i class="mui-icon mui-icon-checkmarkempty"></i>
-			</div>
-			<div class="item">
-				<p><span class="left">卓威</span><span class="right">10:00</span></p>
-				<p>关于中心代码库更新的通知</p>
-				<p>信息中心运维科</p>
-				<i class="mui-icon mui-icon-checkmarkempty"></i>
+				<i class="mui-icon mui-icon-checkmarkempty" @click="itemselected(item)"></i>
 			</div>
 		</div>
-
+		<div class="bottom" v-if="hasSelected">
+			<span>同意</span>
+			<span>退回</span>
+		</div>
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'TaskList'
+		name: 'TaskList',
+		data() {
+			return {
+				hasSelected:false,
+				itemlist: [{name:'1'}, {name:'1'},{name:'1'},{name:'1'}]
+			}
+		},
+		methods: {
+			itemselected(item) {
+				if(typeof item.isSelected == 'undefined') {
+					this.$set(item, 'isSelected',false);
+				}
+				item.isSelected = !item.isSelected;
+				this.showController();
+			},
+			showController(){
+				this.hasSelected = false;
+				this.itemlist.forEach((item)=>{
+					item.isSelected==true?this.hasSelected=true:'';
+				})
+			}
+		}
 	}
 </script>
 
@@ -91,9 +103,28 @@
 					margin-left: -0.5rem;
 				}
 				&.active i {
-					background:$light-color;
-					border-color:$light-color;
+					background: $light-color;
+					border-color: $light-color;
 				}
+			}
+		}
+		.bottom {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 2.2rem;
+			line-height: 2.2rem;
+			background: $maincolor;
+			color: #fff;
+			span {
+				display: block;
+				width: 40%;
+				height: 100%;
+				font-size: $small-textsize;
 			}
 		}
 	}

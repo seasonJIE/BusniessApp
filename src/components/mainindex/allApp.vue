@@ -1,5 +1,5 @@
 <template>
-	<div class="allapp">
+	<div class="allapp" :class="{alter:isAlter}">
 		<header id="header" class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>首页</span></a>
 			<input type="text" placeholder="全部应用" />
@@ -7,7 +7,7 @@
 		<div class="myapp">
 			<p class="title">
 				我的应用
-				<span class="right">编辑</span>
+				<span class="right" @click="alter">{{editbtn}}</span>
 			</p>
 			<div>
 				<img src="../../assets/allapp/产区.png" />
@@ -27,18 +27,22 @@
 						<div class="item">
 							<img src="../../assets/allapp/作业管理.png" />
 							<p>日程管理</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/安全检查.png" />
 							<p>会议室预定</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/预警预测.png" />
 							<p>用车申请</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/产区.png" />
 							<p>客饭预定</p>
+							<i class="add_icon"></i>
 						</div>
 					</div>
 				</div>
@@ -48,18 +52,22 @@
 						<div class="item">
 							<img src="../../assets/allapp/加工计划.png" />
 							<p>产量上报</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/作业管理.png" />
 							<p>工艺标准</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/日报.png" />
 							<p>生产工单</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/报表.png" />
 							<p>原料库存</p>
+							<i class="add_icon"></i>
 						</div>
 					</div>
 				</div>
@@ -69,18 +77,22 @@
 						<div class="item">
 							<img src="../../assets/allapp/产区.png" />
 							<p>销售收入</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/工资.png" />
 							<p>成本费用</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/预警预测.png" />
 							<p>薪金水平</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/报表.png" />
 							<p>盈亏分析</p>
+							<i class="add_icon"></i>
 						</div>
 					</div>
 				</div>
@@ -90,18 +102,22 @@
 						<div class="item">
 							<img src="../../assets/allapp/加工计划.png" />
 							<p>调拨计划</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/预警预测.png" />
 							<p>加工计划</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/活动.png" />
 							<p>产区基地</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/安全检查.png" />
 							<p>烟叶质量</p>
+							<i class="add_icon"></i>
 						</div>
 					</div>
 				</div>
@@ -111,18 +127,22 @@
 						<div class="item">
 							<img src="../../assets/allapp/作业管理.png" />
 							<p>作业管理</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/安全检查.png" />
 							<p>安全检查</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/预警预测.png" />
 							<p>预警预测</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/日报.png" />
 							<p>隐患上报</p>
+							<i class="add_icon"></i>
 						</div>
 					</div>
 				</div>
@@ -132,22 +152,27 @@
 						<div class="item">
 							<img src="../../assets/allapp/工资.png" />
 							<p>薪资信息</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/绩效管理.png" />
 							<p>绩效考核</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/培训.png" />
 							<p>教育培训</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/审批.png" />
 							<p>考勤信息</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/加工计划.png" />
 							<p>人岗匹配</p>
+							<i class="add_icon"></i>
 						</div>
 					</div>
 				</div>
@@ -157,14 +182,17 @@
 						<div class="item">
 							<img src="../../assets/allapp/作业管理.png" />
 							<p>作业管理</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/安全检查.png" />
 							<p>安全检查</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/预警预测.png" />
 							<p>预警预测</p>
+							<i class="add_icon"></i>
 						</div>
 					</div>
 				</div>
@@ -174,22 +202,27 @@
 						<div class="item">
 							<img src="../../assets/allapp/工资.png" />
 							<p>薪资信息</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/绩效管理.png" />
 							<p>绩效考核</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/培训.png" />
 							<p>教育培训</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/审批.png" />
 							<p>考勤信息</p>
+							<i class="add_icon"></i>
 						</div>
 						<div class="item">
 							<img src="../../assets/allapp/加工计划.png" />
 							<p>人岗匹配</p>
+							<i class="add_icon"></i>
 						</div>
 					</div>
 				</div>
@@ -202,13 +235,22 @@
 	import BScroll from 'better-scroll';
 	export default {
 		name: 'AllApp',
+		data(){
+			return {
+				isAlter:false,
+				editbtn:'编辑'
+			}
+		},
 		mounted() {
-			
 			this.$nextTick(() => {
 				this.scroll = new BScroll(this.$refs.wrapper, {})
 			});
-			
-			
+		},
+		methods:{
+			alter(){
+				this.isAlter=!this.isAlter;
+				this.isAlter==true?this.editbtn='保存':this.editbtn='编辑';
+			}
 		}
 	}
 </script>
@@ -244,6 +286,7 @@
 			background-size: 1rem;
 		}
 	}
+	
 	#wrapper {
 		z-index: 1;
 		position: absolute;
@@ -252,6 +295,7 @@
 		bottom: 0;
 		top: 6rem;
 	}
+	
 	.myapp {
 		position: relative;
 		z-index: 2;
@@ -300,7 +344,8 @@
 			display: flex;
 			flex-wrap: wrap;
 			.item {
-				margin-top: 0.6rem;
+				position: relative;
+				padding-top: 0.6rem;
 				width: 25%;
 				img {
 					width: 1.3rem;
@@ -311,7 +356,23 @@
 					font-size: $normal-textsize;
 					color: $black-textcolor;
 				}
+				.add_icon {
+					display: none;
+					position: absolute;
+					top: 0.2rem;
+					right: 0.4rem;
+					height: 0.6rem;
+					width: 0.6rem;
+					background: url(../../assets/icon/plus_icon.png) no-repeat center;
+					background-size: 100%;
+				}
 			}
+		}
+	}
+	
+	.allapp.alter {
+		.add_icon {
+			display: block !important; 
 		}
 	}
 </style>

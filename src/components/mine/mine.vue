@@ -1,7 +1,7 @@
 <template>
 	<div class="mine">
 		<div class="header">
-			<a class="code"></a>
+			<router-link to="/main/mine/mycode" class="code"></router-link>
 			<div class="top">
 				<img src="../../assets/head.png" />
 				<p>王伟</p>

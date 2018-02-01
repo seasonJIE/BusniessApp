@@ -22,9 +22,11 @@ import Inbox from 'components/messageindex/mail/inbox'
 import MailDetail from 'components/messageindex/mail/maildetail'
 import Found from 'components/found/found'
 import News from 'components/found/news/news'
+import NewsDetail from 'components/found/news/newsDetail'
 import Activity from 'components/found/activity/activity'
 import Workring from 'components/found/workring/workring'
 import Mine from 'components/mine/mine'
+import MyCode from 'components/mine/mycode'
 import PersonalFile from 'components/mine/personalFile'
 Vue.use(Router)
 
@@ -126,6 +128,11 @@ export default new Router({
 			component: AllApp
 		},
 		{
+			path: '/main/mainindex/hotdetail',
+			name: 'NewsDetail',
+			component: NewsDetail
+		},
+		{
 			path: '/main/messageindex/mail/inbox',
 			name: 'Inbox',
 			component: Inbox
@@ -159,6 +166,11 @@ export default new Router({
 			path: '/main/mine/personalfile',
 			name: 'PersonalFile',
 			component: PersonalFile
+		},
+		{
+			path: '/main/mine/mycode',
+			name: 'MyCode',
+			component: MyCode
 		},
 		{
 			path: '/main/code/code',

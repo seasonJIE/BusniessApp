@@ -2,8 +2,10 @@
 	<div class="bg_fixed" v-if="isShow=='true'">
 		<div class="hotpoint">
 			<a class="close" @click="hidehot"></a>
-			<img src="../../assets/tu.jpg">
-			<p>上海烟草开展基层单位党组织书记党性锻炼专题培训班</p>
+			<router-link tag="div" to="/main/mainindex/hotdetail">
+				<img src="../../assets/tu.jpg">
+				<p>上海烟草开展基层单位党组织书记党性锻炼专题培训班</p>
+			</router-link>
 		</div>
 		<div class="bg"></div>
 	</div>

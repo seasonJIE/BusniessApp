@@ -4,9 +4,9 @@
 			<p>分类</p>
 			<div class="tabcontent">
 				<a class="item"><span>新闻</span></a>
-				<a class="item"><span>新闻</span></a>
-				<a class="item"><span>新闻</span></a>
-				<a class="item"><span>新闻</span></a>
+				<a class="item"><span>政治</span></a>
+				<a class="item"><span>公告</span></a>
+				<a class="item"><span>活动</span></a>
 				<a class="item"><span>新闻</span></a>
 				<a class="item"><span>新闻</span></a>
 			</div>
@@ -133,6 +133,14 @@
 					span {
 						position: relative;
 						z-index: 2;
+					}
+					&:nth-child(2){
+						background: url(../../../assets/message/news_bg.png) no-repeat center;
+						background-size: 100%;
+					}
+					&:nth-child(2n+1){
+						background: url(../../../assets/news.jpg) no-repeat center;
+						background-size: 10rem;
 					}
 				}
 				.item:after {

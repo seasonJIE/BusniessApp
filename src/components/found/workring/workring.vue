@@ -37,7 +37,6 @@
 								<img src="../../../assets/tu.jpg">
 								<img src="../../../assets/tu.jpg">
 							</div>
-
 						</div>
 					</div>
 					<div class="controll_div">
@@ -82,7 +81,7 @@
 <style scoped lang="scss">
 	@import "~common/scss/baseColorSize";
 	.workring {
-		margin-top: 38px;
+		margin-top: 1.9rem;
 		padding-bottom: 50px;
 		.wrapper {
 			position: absolute;
@@ -127,20 +126,24 @@
 				margin-bottom: 0.2rem;
 				background: #fff;
 				.top {
+					position: relative;
 					padding: 1rem 1.5rem;
 					padding-bottom: 0;
 					overflow: hidden;
-					display: flex;
+					/*display: flex;*/
 					.headimg {
-						margin-right: 0.3rem;
-						float: left;
+						position: absolute;
+						left: 1.5rem;
 						height: 1.9rem;
 						width: 1.9rem;
 						background: #ddd;
 						border-radius: 0.2rem;
 					}
 					.right {
-						float: right;
+						padding-left: 2.2rem;
+						height: 100%;
+						overflow:hidden;
+						width: auto;
 					}
 					.img_div {
 						margin: 0.4rem 0;

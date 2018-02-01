@@ -21,7 +21,7 @@
 			<p class="title">辅料库存情况</p>
 			<div id="echart_div" class="echarts_div" ref='mychart1'></div>
 		</div>
-		<div class="card" @click="routerto('/main/mainindex/chartsdetail')">
+		<div class="card">
 			<p class="title">审查注释</p>
 			<div id="echart_div" class="echarts_div" ref='mychart2'></div>
 		</div>
@@ -134,7 +134,7 @@
 			}
 			.title {
 				overflow: hidden;
-				text-indent: 0.2rem;
+				padding-left: 0.4rem;
 				font-size: $small-textsize;
 				color: $grey-textcolor;
 				.more {
