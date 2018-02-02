@@ -18,7 +18,7 @@
 		</div>
 		<div class="bottom">
 			<router-link to="/main/mine/mycode" class="minecode" tag="span">我的名片</router-link>
-			<router-link to="/main/code/code" tag="span" class="tocode">扫一扫</router-link>
+			<router-link to="/main/code" tag="span" class="tocode">扫一扫</router-link>
 		</div>
 	</div>
 </template>

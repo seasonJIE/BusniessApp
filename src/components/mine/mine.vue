@@ -4,7 +4,7 @@
 			<router-link to="/main/mine/mycode" class="code"></router-link>
 			<div class="top">
 				<img src="../../assets/head.png" />
-				<p>王伟</p>
+				<p>卓蔚</p>
 				<p class="job">信息中心运维科 科长</p>
 				<a class="dowm"></a>
 			</div>
@@ -26,22 +26,22 @@
 
 		<ul class="mui-table-view">
 			<li class="mui-table-view-cell">
-				<router-link to="/main/mine/personalfile" class="mui-navigate-right">
+				<a to="/main/mine/personalfile" class="mui-navigate-right">
 					<img src="../../assets/mine/mine1.png" />
 					<span class="left">我的文件</span>
-				</router-link>
+				</a>
 			</li>
 			<li class="mui-table-view-cell">
-				<router-link to="/main/mine/personalfile" class="mui-navigate-right">
+				<a to="/main/mine/personalfile" class="mui-navigate-right">
 					<img src="../../assets/mine/mine2.png" />
 					<span class="left">我的收藏</span>
-				</router-link>
+				</a>
 			</li>
 			<li class="mui-table-view-cell">
-				<router-link to="/main/mine/personalfile" class="mui-navigate-right">
+				<a to="/main/mine/personalfile" class="mui-navigate-right">
 					<img src="../../assets/mine/mine3.png" />
 					<span class="left">系统设置</span>
-				</router-link>
+				</a>
 			</li>
 		</ul>
 		<b-tabbar></b-tabbar>

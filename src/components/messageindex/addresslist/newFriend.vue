@@ -52,7 +52,7 @@
 		right: 0;
 		background: #fff;
 		.search_div {
-			margin-top:44px;
+			margin-top:2.2rem;
 			overflow:hidden;
 			background:#e8ecef;
 			height:1.9rem;

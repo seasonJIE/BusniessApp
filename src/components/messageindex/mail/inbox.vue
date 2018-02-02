@@ -14,33 +14,43 @@
 				<router-link to="/main/messageindex/mail/inbox/maildetail" tag="div" class="item">
 					<i class="tips circle"></i>
 					<p>
-						<span class="name">王伟</span>
+						<span class="name">卓蔚</span>
 						<span class="icon light"></span>
-						<span class="time">下午15:30</span>
+						<span class="time">下午13:30</span>
 
 					</p>
-					<p class="texttitle"><i class="resend"></i>王伟2018.01.03工作周报</p>
+					<p class="texttitle"><i class="resend"></i>卓蔚2018.01.03工作周报</p>
 					<p>本周工作任务主要为:1、项目1;2、项目2;2、项目2;自我评估:良好;</p>
 				</router-link>
 				<div class="item">
 					<i class="tips others"></i>
 					<p>
-						<span class="name">王伟</span>
+						<span class="name">王玮</span>
 						<span class="icon"></span>
 						<span class="time">下午15:30</span>
 					</p>
-					<p class="texttitle"><i class="resend"></i>王伟2018.01.03工作周报</p>
+					<p class="texttitle"><i class="resend"></i>王玮2018.01.03工作周报</p>
 					<p>本周工作任务主要为:1、项目1;2、项目2;2、项目2;自我评估:良好;</p>
 				</div>
 				<div class="item">
 					<i class="tips others"></i>
 					<p>
-						<span class="name">王伟</span>
+						<span class="name">卓蔚</span>
 						<span class="icon"></span>
 						<span class="time">下午15:30</span>
 					</p>
-					<p class="texttitle"><i class="resend"></i>王伟2018.01.03工作周报</p>
+					<p class="texttitle"><i class="resend"></i>卓蔚2018.01.03工作周报</p>
 					<p>本周工作任务主要为:1、项目1;2、项目2;2、项目2;自我评估:良好;</p>
+				</div>
+				<div class="item">
+					<i class="tips others"></i>
+					<p>
+						<span class="name">总经办</span>
+						<span class="icon"></span>
+						<span class="time">下午16:30</span>
+					</p>
+					<p class="texttitle"><i class="resend"></i>体检通知</p>
+					<p>各位：总经办下发《2017年体检通知》，请各位查收。</p>
 				</div>
 			</div>
 		</div>

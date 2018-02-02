@@ -14,7 +14,7 @@
 			<li class="mui-table-view-cell">
 				<a class="mui-navigate-right">
 					<span class="left">姓名</span>
-					<span class="right">卓乃</span>
+					<span class="right">卓蔚</span>
 				</a>
 			</li>
 			<li class="mui-table-view-cell">

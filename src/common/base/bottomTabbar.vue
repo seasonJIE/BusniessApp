@@ -15,7 +15,7 @@
 			</span>
 			<span class="text">消息</span>
 		</router-link>
-		<router-link to="/main/code/code" class=" saoma">
+		<router-link to="/main/code" class=" saoma">
 			<span class="iconfont icon-saoma"></span>
 		</router-link>
 		<router-link to="/main/found">

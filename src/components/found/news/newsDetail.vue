@@ -66,6 +66,8 @@
 			width: 100%;
 		}
 		.text {
+			text-indent: 1rem;
+			text-align:justify;
 			font-size: $normal-textsize;
 			color: $black-textcolor;
 		}

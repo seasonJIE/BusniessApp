@@ -12,28 +12,19 @@
 					</div>
 				</div>
 				<div class="one_memssage">
-					<img src="../../../assets/head.png">
+					<span class="headimg" style="background: #6D6D72;">HR</span>
 					<div class="right">
-						<p>MES系统通知</p>
-						<p>关于中心代码库更新的通知</p>
-						<span>10:00</span>
+						<p>HR系统通知</p>
+						<p>关于社保基数调整的通知</p>
+						<span>12:00</span>
 					</div>
 				</div>
 				<div class="one_memssage">
 					<img src="../../../assets/head.png">
 					<div class="right">
-						<p>MES系统通知</p>
-						<p>关于中心代码库更新的通知</p>
-						<span>10:00</span>
-					</div>
-				</div>
-				<div class="one_memssage">
-					<img src="../../../assets/head.png" v-if="false">
-					<span class="headimg">HR</span>
-					<div class="right">
-						<p>MES系统通知</p>
-						<p>关于中心代码库更新的通知</p>
-						<span>10:00</span>
+						<p>卓蔚</p>
+						<p>下午一点开会</p>
+						<span>11:43</span>
 					</div>
 				</div>
 			</div>

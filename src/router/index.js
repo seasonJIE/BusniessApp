@@ -173,7 +173,7 @@ export default new Router({
 			component: MyCode
 		},
 		{
-			path: '/main/code/code',
+			path: '/main/code',
 			name: 'Code',
 			component: Code
 		}

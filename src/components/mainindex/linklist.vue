@@ -1,35 +1,35 @@
 <template>
 	<ul class="linklist">
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/邮件.png"></img>
+				<img class="icon-png" src="../../assets/mainapp/mail.png"></img>
 				<span class="text">邮件</span>
 			</li>
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/日报.png"></img>
+				<img class="icon-png" src="../../assets/mainapp/report.png"></img>
 				<span class="text">日报</span>
 			</li>
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/工资.png"></img>
+				<img class="icon-png" src="../../assets/mainapp/gongzi.png"></img>
 				<span class="text">工资</span>
 			</li>
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/培训.png"></img>
+				<img class="icon-png" src="../../assets/mainapp/peixun.png"></img>
 				<span class="text">培训</span>
 			</li>
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/审批.png"></img>
+				<img class="icon-png" src="../../assets/mainapp/shenpi.png"></img>
 				<span class="text">审批</span>
 			</li>
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/绩效.png"></img>
+				<img class="icon-png" src="../../assets/mainapp/jixiao.png"></img>
 				<span class="text">绩效</span>
 			</li>
 			<li>
-				<img class="icon-png" src="../../assets/首页应用图标/统计分析.png"></img>
+				<img class="icon-png" src="../../assets/mainapp/tongji.png"></img>
 				<span class="text">统计</span>
 			</li>
 			<router-link tag="li" to="/main/mainindex/allapp">
-				<img class="icon-png" src="../../assets/首页应用图标/全部.png"></img>
+				<img class="icon-png" src="../../assets/mainapp/all.png"></img>
 				<span class="text">全部</span>
 			</router-link>
 		</ul>

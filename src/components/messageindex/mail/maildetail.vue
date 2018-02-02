@@ -6,19 +6,19 @@
 		    <a class="right prev"></a>
 		</header>
 		<div class="top">
-			<p>发件人:<span>卓乃</span></p>
-			<p>收件人:<span>王伟</span></p>
-			<span class="headimg">卓乃</span>
+			<p>发件人:<span>卓蔚</span></p>
+			<p>收件人:<span>王玮</span></p>
+			<span class="headimg">卓</span>
 		</div>
 		<div>
-			<p class="title">州委2018.1.1工作周报</p>
+			<p class="title">卓蔚2018.1.1工作周报</p>
 			<p class="time">2018年1月10日  下午15:30</p>
 		</div>
 		<div class="content">
 			<p>本周工作任务主要:1、项目1;1、项目1;1、项目1;1、项目1;自我评估:良好;</p>
 			<div class="info">
 				<p>上海烟草集团有限公司</p>
-				<p>卓伟</p>
+				<p>卓蔚</p>
 				<p>Tel:<span>13583278378</span></p>
 				<p>Mail:<span>XXSDW@shcy.com</span></p>
 			</div>
