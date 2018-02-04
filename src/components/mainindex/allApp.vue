@@ -48,7 +48,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="wrapper" :class="{altering:isAlter,watching:!isAlter}" :style="{height:wrapper_h}" ref="wrapper">
+		<div id="wrapper" :class="{altering:isAlter,watching:!isAlter}" :style="{top:wrappertop}" ref="wrapper">
 			<div>
 				<div class="myapp">
 					<p class="title">
@@ -235,29 +235,33 @@
 		data() {
 			return {
 				isAlter: false,
-				wrapper_h:'0',
-				window_h:0
+				alrering_top:0,
+				watching_top:0
 			}
 		},
-//		computed:{
-//			computeWrapperH(){
-//				this.wrapper_h = this.window_h- this.$refs.header.offsetHeight - this.$refs.alter_div.offsetHeight;
-//			}
-//		},
+		computed: {
+			wrappertop() {
+				if(this.isAlter == true) {
+					return this.alrering_top;
+				} else {
+					return this.watching_top;
+				}
+			}
+		},
 		mounted() {
 			this.$nextTick(() => {
-				let h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-				this.window_h = h;
-				let head_h = this.$refs.header.offsetHeight;
-				this.wrapper_h = (h-head_h)+'px';
+				this.watching_top = this.$refs.header.offsetHeight+'px';
+				this.alrering_top = this.$refs.header.offsetHeight + this.$refs.alter_div.offsetHeight + 'px';
+				this.top = this.watching_top;
 				this.scroll = new BScroll(this.$refs.wrapper, {});
+				this.scroll.on('beforeScrollStart',()=>{
+					this.scroll.refresh();
+				});
 			});
 		},
 		methods: {
 			alter() {
 				this.isAlter = true;
-//				this.computeWrapperH()
-//				alert(this.wrapper_h)
 			},
 			finish() {
 				this.isAlter = false;
@@ -314,6 +318,7 @@
 			margin: 0;
 		}
 	}
+	
 	.alter_div.altering {
 		transform: translateY(0);
 		.typeblock .itemblock .item {
@@ -326,21 +331,21 @@
 			}
 		}
 	}
+	
 	.alter_div.watching {
 		transform: translateY(-10rem);
 	}
+	
 	#wrapper {
 		z-index: 1;
-		/*position: absolute;
+		position: absolute;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		top: 2.1rem;*/
-		position: relative;
-		width: 100%;
-		height: 0;
+		top: 2.1rem;
 		transition: all 400ms;
 	}
+	
 	#wrapper.watching {
 		top: 2.1rem;
 		.myapp {
@@ -350,6 +355,7 @@
 			transition: all 400ms;
 		}
 	}
+	
 	#wrapper.altering {
 		top: 10.45rem;
 		.myapp {
@@ -367,6 +373,7 @@
 			transition-delay: 400ms;
 		}
 	}
+	
 	.myapp {
 		position: relative;
 		overflow: hidden;
@@ -385,6 +392,7 @@
 			width: 1rem;
 		}
 	}
+	
 	.title {
 		margin: 0;
 		overflow: hidden;
@@ -404,6 +412,7 @@
 			border-radius: 0.1rem;
 		}
 	}
+	
 	.typeblock {
 		margin: 0.2rem 0;
 		padding: 0.5rem;
