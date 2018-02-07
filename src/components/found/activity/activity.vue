@@ -4,13 +4,13 @@
 		<div class="activity">
 			<div class="one_activity">
 				<div class="top">
-					<img src="../../../assets/tu.jpg">
+					<img src="../../../assets/5.jpg">
 					<div class="tip">进行中 <i></i>15天</div>
 					<div class="content">
 						<p><span class="title left">十八大精神竞赛</span>
 							<a class="apart_btn right">参加</a>
 						</p>
-						<p><span class="left">内容内容开赛</span><span class="right">已参赛23人</span></p>
+						<p><span class="left">机关工会召开十八大学习精神竞赛。</span><span class="right">已参赛23人</span></p>
 					</div>
 				</div>
 				<div class="controll_div">
@@ -22,13 +22,13 @@
 			</div>
 			<div class="one_activity">
 				<div class="top">
-					<img src="../../../assets/img.png">
+					<img src="../../../assets/huodong2.jpg">
 					<div class="tip">进行中 <i></i>15天</div>
 					<div class="content">
-						<p><span class="title left">十八大精神竞赛</span>
+						<p><span class="title left">集团公司举办兼职培训师进修班</span>
 							<a class="apart_btn right">参加</a>
 						</p>
-						<p><span class="left">内容内容开赛</span><span class="right">已参赛23人</span></p>
+						<p><span class="left">金燕培训基地举办2017年度兼职培训师进修班</span><span class="right">已参赛23人</span></p>
 					</div>
 				</div>
 				<div class="controll_div">
@@ -40,13 +40,13 @@
 			</div>
 			<div class="one_activity over">
 				<div class="top">
-					<img src="../../../assets/tu.jpg">
+					<img src="../../../assets/4.jpg">
 					<div class="tip">已结束</div>
 					<div class="content">
-						<p><span class="title left">十八大精神竞赛</span>
+						<p><span class="title left">一站到底</span>
 							<a class="apart_btn right">参加</a>
 						</p>
-						<p><span class="left">内容内容开赛</span><span class="right">已参赛23人</span></p>
+						<p><span class="left">宝山烟草积极开展“法律伴我行”普法竞赛 </span><span class="right">已参赛38人</span></p>
 					</div>
 				</div>
 				<div class="controll_div">
@@ -66,7 +66,7 @@
 		name: 'Activity',
 		mounted() {
 			this.$nextTick(() => {
-				this.scroll = new BScroll(this.$refs.wrapper, {})
+				this.scroll = new BScroll(this.$refs.wrapper, {click: true})
 			})
 		}
 	}
@@ -92,11 +92,11 @@
 	}
 	
 	.one_activity {
-		margin-bottom: 0.2rem;
+		margin-bottom: 0.5rem;
 		background: #fff;
 		.top {
 			position: relative;
-			padding: 0.7rem 0.5rem 0 0.5rem;
+			padding: 0.6rem 0.8rem;
 			img {
 				width: 100%;
 				height: 8.9rem;
@@ -107,13 +107,13 @@
 				justify-content: center;
 				align-items: center;
 				top: 1rem;
-				right: 0.5rem;
+				right: 0.8rem;
 				height: 1rem;
 				line-height: 1rem;
 				min-width: 3.2rem;
 				color: #fff;
 				background: #ff9000;
-				font-size: $normal-textsize;
+				font-size: $min-textsize;
 				i {
 					margin-left: 0.2rem;
 					display: inline-block;
@@ -127,7 +127,7 @@
 				content: '';
 				position: absolute;
 				bottom: 0;
-				left: -0.5rem;
+				left: -0.45rem;
 				width: 0;
 				height: 0;
 				font-size: 0;
@@ -138,7 +138,7 @@
 				content: '';
 				position: absolute;
 				top: 0;
-				left: -0.5rem;
+				left: -0.45rem;
 				width: 0;
 				height: 0;
 				font-size: 0;
@@ -146,15 +146,18 @@
 				border-bottom: 0.5rem solid transparent;
 			}
 			.content {
-				padding: 0.2rem 0.5rem;
 				p {
-					margin: 0;
+					margin:0.2rem 0;
 					overflow: hidden;
-					font-size: $small-textsize;
+					font-size: $normal-textsize;
 					color: $grey-textcolor;
+					
+					.right {
+						font-size: $min-textsize;
+					}
 				}
 				.title {
-					font-size: $normal-textsize;
+					font-size: $large-textsize;
 					color: $black-textcolor;
 				}
 				.apart_btn {

@@ -66,16 +66,16 @@
 	.mail {
 		margin-top: 1.9rem;
 		.cricle-icon {
-			margin-top: 0.2rem;
+			margin-top: 0.15rem;
 			display: inline-block;
-			height: 0.6rem;
-			line-height: 0.6rem;
-			width: 0.6rem;
+			height: 0.7rem;
+			line-height: 0.7rem !important; 
+			width: 0.7rem;
 			background: red;
 			color: #fff !important;
 			border-radius: 1rem;
 			text-align: center;
-			font-size: $min-textsize;
+			font-size: $min-textsize !important;
 		}
 	}
 </style>

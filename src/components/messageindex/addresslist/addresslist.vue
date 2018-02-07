@@ -1,19 +1,6 @@
 <template>
 	<div class="addresslist">
-		<ul class="mui-table-view">
-			<router-link to="/main/messageindex/addresslist/newfriend" tag="li" class="mui-table-view-cell">
-				<img src="../../../assets/message/address1.png">
-				<span class="left">新的朋友</span>
-			</router-link>
-			<li class="mui-table-view-cell">
-				<img src="../../../assets/message/address2.png">
-				<span class="left">我的群聊</span>
-			</li>
-			<li class="mui-table-view-cell">
-				<img src="../../../assets/message/addresslist.png">
-				<span class="left">集团通讯录</span>
-			</li>
-		</ul>
+		
 		<div class="phonelist">
 			<div id="list" class="mui-indexed-list" ref="list">
 				<div class="mui-indexed-list-search mui-input-row mui-search" style="display: none;">
@@ -49,11 +36,25 @@
 				</div>
 				<div class="mui-indexed-list-alert"></div>
 				<div class="mui-indexed-list-inner">
+					<ul class="mui-table-view">
+			<router-link to="/main/messageindex/addresslist/newfriend" tag="li" class="mui-table-view-cell">
+				<img src="../../../assets/message/address1.png">
+				<span class="left">新的朋友</span>
+			</router-link>
+			<li class="mui-table-view-cell">
+				<img src="../../../assets/message/address2.png">
+				<span class="left">我的群聊</span>
+			</li>
+			<li class="mui-table-view-cell">
+				<img src="../../../assets/message/addresslist.png">
+				<span class="left">集团通讯录</span>
+			</li>
+		</ul>
 					<div class="mui-indexed-list-empty-alert">没有数据</div>
 					<ul class="mui-table-view">
 						<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
 						<li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
+							<img src="../../../assets/h1.jpg">
 							<span class="left">阿斯德</span>
 						</li>
 						<li data-value="AKU" data-tags="Aliex" class="mui-table-view-cell mui-indexed-list-item">
@@ -61,38 +62,26 @@
 							<span class="left">Aliex</span>
 						</li>
 						<li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">阿伏伽德罗</span>
+							<img src="../../../assets/h3.jpg">
+							<span class="left">阿古斯</span>
 						</li>
 						<li data-value="AKU" data-tags="AKeSu" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">阿斯克德</span>
+							<img src="../../../assets/h2.jpg">
+							<span class="left">阿克蒙德</span>
 						</li>
 						<li data-group="B" class="mui-table-view-divider mui-indexed-list-group">B</li>
-						<li data-value="BB" data-tags="BB" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">贝贝</span>
-						</li>
-						<li data-value="BL" data-tags="Baoluo" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">保罗</span>
-						</li>
 						<li data-value="BB" data-tags="bb" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
+							<img src="../../../assets/h4.jpg">
 							<span class="left">贝贝</span>
 						</li>
 						<li data-group="G" class="mui-table-view-divider mui-indexed-list-group">G</li>
 						<li data-value="GD" data-tags="Goudan" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
+							<img src="../../../assets/h2.jpg">
 							<span class="left">古尔丹</span>
 						</li>
 						<li data-value="GD" data-tags="Goudan" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">古尔丹</span>
-						</li>
-						<li data-value="GD" data-tags="Goudan" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">古尔丹</span>
+							<img src="../../../assets/h2.jpg">
+							<span class="left">古加尔</span>
 						</li>
 						<li data-group="X" class="mui-table-view-divider mui-indexed-list-group">X</li>
 						<li data-value="XE" data-tags="XerWanasi" class="mui-table-view-cell mui-indexed-list-item">
@@ -100,24 +89,8 @@
 							<span class="left">希尔瓦纳斯</span>
 						</li>
 						<li data-value="XE" data-tags="XerWanasi" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">希尔瓦纳斯</span>
-						</li>
-						<li data-value="XE" data-tags="XerWanasi" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">希尔瓦纳斯</span>
-						</li>
-							<li data-value="XE" data-tags="XerWanasi" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">希尔瓦纳斯</span>
-						</li>
-						<li data-value="XE" data-tags="XerWanasi" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">希尔瓦纳斯</span>
-						</li>
-						<li data-value="XE" data-tags="XerWanasi" class="mui-table-view-cell mui-indexed-list-item">
-							<img src="../../../assets/head.png">
-							<span class="left">希尔瓦纳斯</span>
+							<img src="../../../assets/h4.jpg">
+							<span class="left">西尔维娅</span>
 						</li>
 					</ul>
 				</div>
@@ -151,10 +124,12 @@
 		bottom: 50px;
 		left: 0;
 		right: 0;
-		
+		.mui-table-view {
+			margin:0;
+		}
 		.phonelist {
 			position: absolute;
-			top: 6.6rem;
+			top: 0;
 			left: 0;
 			right: 0;
 			bottom: 0;
@@ -177,11 +152,14 @@
 					background: #e8ecef;
 					border: none;
 				}
+				.mui-indexed-list-group:before,.mui-indexed-list-group:after {
+					height: 0;
+				}
 				.mui-indexed-list-bar {
 					background: none;
-					
+					padding: 0.2rem 0;
 					a {
-						margin: 0.05rem 0;
+						margin: 0.03rem 0;
 						font-size: $min-textsize;
 						color: $black-textcolor;
 					}

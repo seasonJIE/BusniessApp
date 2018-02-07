@@ -68,7 +68,7 @@
 		name: 'Inbox',
 		mounted() {
 			this.$nextTick(() => {
-				this.scroll = new BScroll(this.$refs.wrapper, {})
+				this.scroll = new BScroll(this.$refs.wrapper, {click: true})
 			})
 		}
 	}
@@ -94,17 +94,20 @@
 			background-size: 100%;
 		}
 		.search_div {
+			padding: 0 0.8rem;
 			overflow: hidden;
+			display:flex;
+			align-items: center;
+			justify-content: center;
 			background: #e8ecef;
-			height: 1.9rem;
-			line-height: 1.7rem;
+			height: 2.1rem;
 			input {
 				margin: 0;
 				padding: 0;
 				padding-left: 1.3rem;
-				height: 1rem;
-				line-height: 1rem;
-				width: 92%;
+				height: 1.3rem;
+				line-height: 1.3rem;
+				width:100%;
 				border: 1px solid #dce1e4;
 				background: url(../../../assets/icon/search.png) no-repeat 0.3rem center #fff;
 				background-size: 0.8rem;
@@ -141,11 +144,12 @@
 				p {
 					margin: 0;
 					overflow: hidden;
-					font-size: $normal-textsize;
+					font-size: $small-textsize;
 					color: $grey-textcolor;
 				}
 				.name {
 					float: left;
+					font-size: $normal-textsize;
 					color: $black-textcolor;
 				}
 				.time {
@@ -168,7 +172,7 @@
 				.texttitle {
 					position: relative;
 					overflow: initial;
-					font-size: $small-textsize;
+					font-size: $normal-textsize;
 					color: $black-textcolor;
 					.resend {
 						position: absolute;

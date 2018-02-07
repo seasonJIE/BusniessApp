@@ -1,6 +1,8 @@
 #header {
     position: absolute !important;
     height: 2.2rem;
+//  padding-left: 0.8rem;
+    padding-right: 0.8rem;
     background: $maincolor;
     .mui-action-back {
         font-size: 1.2rem;
@@ -12,13 +14,13 @@
             display: inline-block;
             height: 1.2rem;
             line-height: 1.2rem;
-            font-size: 0.6rem;
+            font-size: 0.7rem;
         }
     }
     .mui-title {
         color: #fff;
         line-height: 2.2rem;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
     .right {
         float: right;
@@ -36,7 +38,7 @@
         overflow: hidden;
         height: 1.2rem;
         line-height: 1.2rem;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         color: $header-activetextcolor;
     }
 }
@@ -44,15 +46,15 @@
 .mui-table-view {
     margin-bottom: 0.6rem;
     .mui-table-view-cell {
-        padding: 0.55rem 0.75rem;
+        padding: 0.6rem 0.8rem;
         height: 2.2rem;
         img {
             position: absolute;
             top: 50%;
             left: 0.8rem;
-            margin-top: -0.65rem;
-            height: 1.3rem;
-            width: 1.3rem;
+            margin-top: -0.75rem;
+            height: 1.5rem;
+            width: 1.5rem;
             border-radius: 0.2rem;
             background: #ddd;
         }
@@ -60,10 +62,10 @@
            position: absolute;
             top: 50%;
             left: 0.8rem;
-            margin-top: -0.65rem;
-            height: 1.3rem;
-            line-height: 1.3rem;
-            width: 1.3rem;
+            margin-top: -0.75rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            width: 1.5rem;
             text-align: center;
             font-size: $min-textsize;
             background: #F27847;
@@ -72,7 +74,7 @@
         }
         .left {
             display: inline-block;
-            margin-left: 1.7rem;
+            margin-left: 1.9rem;
             height: 1.1rem;
             line-height: 1.1rem;
             float: left;
@@ -82,14 +84,18 @@
         .right {
             float: right;
             margin-right: 1.2rem;
+            line-height: 1.1rem;
             font-size: $small-textsize;
             color: $grey-textcolor;
         }
         .mui-navigate-right {
             position: relative;
-            margin: -0.55rem -0.75rem;
+            margin: -0.6rem -0.8rem;
             height: 2.2rem;
             font-size: $normal-textsize;
+            &:after {
+                font-size: 1.2rem;
+            }
         }
         &:after {
             left: 0;

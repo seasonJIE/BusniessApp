@@ -66,13 +66,14 @@
 					},
 					legend: {
 						orient: 'horizontal',
+						itemGap:16,
 						itemWidth:10,
 						itemHeight:10,
 						left: 0,
 						bottom:0,
 						data: ['硬盒', '条盒', '纸箱', '内装纸', '内衬纸','薄膜','滤棒'],
 						textStyle:{
-							fontSize:10
+							fontSize:14
 						}
 					},
 					series: [{
@@ -135,14 +136,14 @@
 	.echarts_div {
 		overflow: hidden;
 		margin-top: 2.2rem;
-		padding: 0 1rem;
+		padding: 0.6rem 0.8rem;
 		width: 100%;
 		height: 17rem;
 		background: #e8f6ff !important;
 		p {
-			margin: 0.2rem 0;
+			margin-bottom: 0.2rem;
 			text-align: left;
-			font-size: $small-textsize;
+			font-size: $normal-textsize;
 		}
 		.select_div {
 			overflow: hidden;
@@ -153,6 +154,7 @@
 				width: 6rem;
 				height: 1rem;
 				color: $black-textcolor;
+				font-size: $normal-textsize;
 				background: none;
 				&.left {
 					float: left;
@@ -164,7 +166,7 @@
 		}
 		#echart_div {
 			width: 100%;
-			height: 14rem;
+			height: 13.4rem;
 		}
 	}
 	
@@ -188,7 +190,7 @@
 				span:nth-child(1) {
 					margin-left: 0.2rem;
 					float: left;
-					font-size: $min-textsize;
+					font-size: $small-textsize;
 					color: #687b87;
 				}
 				span:nth-child(2) {

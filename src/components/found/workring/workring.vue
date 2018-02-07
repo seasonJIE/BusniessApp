@@ -13,7 +13,7 @@
 						<img class="headimg" src="../../../assets/head.png" />
 						<div class="right">
 							<p>
-								<span class="name">王伟</span><span class="time">2017-03-25 11:37</span>
+								<span class="name">卓蔚</span><span class="time">14:20</span>
 							</p>
 							<p>今天下午会议室1:00部门会议，请大家务必准时出席。</p>
 						</div>
@@ -26,38 +26,22 @@
 				</div>
 				<div class="item">
 					<div class="top">
-						<img class="headimg" src="../../../assets/head.png" />
+						<img class="headimg" src="../../../assets/head2.png" />
 						<div class="right">
 							<p>
-								<span class="name">王伟</span><span class="time">2017-03-25 11:37</span>
+								<span class="name">王伟</span><span class="time">10:37</span>
 							</p>
-							<p>今天下午会议室1:00部门会议，请大家务必准时出席。</p>
+							<p>坚守在第一战线。</p>
 							<div class="img_div">
-								<img src="../../../assets/tu.jpg">
-								<img src="../../../assets/tu.jpg">
-								<img src="../../../assets/tu.jpg">
+								<img src="../../../assets/01.jpg">
+								<img src="../../../assets/02.jpg">
+								<img src="../../../assets/03.jpg">
 							</div>
 						</div>
 					</div>
 					<div class="controll_div">
 						<span><i class="iconfont icon-pinglun"></i>1</span>
 						<span><i class="iconfont icon-zan active"></i>2</span>
-						<span><i class="iconfont icon-fenxiang"></i>3</span>
-					</div>
-				</div>
-				<div class="item">
-					<div class="top">
-						<img class="headimg" src="../../../assets/head.png" />
-						<div class="right">
-							<p>
-								<span class="name">王伟</span><span class="time">2017-03-25 11:37</span>
-							</p>
-							<p>今天下午会议室1:00部门会议，请大家务必准时出席。</p>
-						</div>
-					</div>
-					<div class="controll_div">
-						<span><i class="iconfont icon-pinglun"></i>1</span>
-						<span><i class="iconfont icon-zan"></i>2</span>
 						<span><i class="iconfont icon-fenxiang"></i>3</span>
 					</div>
 				</div>
@@ -72,7 +56,7 @@
 		name: 'Workring',
 		mounted() {
 			this.$nextTick(() => {
-				this.scroll = new BScroll(this.$refs.wrapper, {})
+				this.scroll = new BScroll(this.$refs.wrapper, {click: true})
 			})
 		}
 	}
@@ -123,19 +107,18 @@
 		.content {
 			overflow: hidden;
 			.item {
-				margin-bottom: 0.2rem;
+				margin-bottom: 0.5rem;
 				background: #fff;
 				.top {
 					position: relative;
-					padding: 1rem 1.5rem;
-					padding-bottom: 0;
+					padding: 0.6rem 0.8rem;
 					overflow: hidden;
 					/*display: flex;*/
 					.headimg {
 						position: absolute;
-						left: 1.5rem;
-						height: 1.9rem;
-						width: 1.9rem;
+						left: 0.8rem;
+						height: 1.5rem;
+						width: 1.5rem;
 						background: #ddd;
 						border-radius: 0.2rem;
 					}
@@ -157,13 +140,14 @@
 				p {
 					margin: 0;
 					text-align: left;
-					font-size: $small-textsize;
+					font-size: $normal-textsize;
 					color: $black-textcolor;
 					.name {
 						font-size: $normal-textsize;
 						color: $maincolor;
 					}
 					.time {
+						float: right;
 						font-size: $min-textsize;
 						color: $grey-textcolor;
 					}

@@ -7,8 +7,10 @@
 			<div class="content">
 				<p class="title">上海烟草开展基层单位党组织书记党性锻炼专题培训班</p>
 				<p class="tip">最新热点 <span>刚刚</span></p>
-				<img src="../../../assets/tu.jpg" />
-				<p class="text">据中国驻莫桑比克使馆微信公众号消息，自2017年末以来，莫桑比克进入雨季，霍乱、疟疾等传染病多发，北部地区爆发小规模霍乱疫情。霍乱是由霍乱弧菌引起的烈性肠道传染病，潜伏期为5天，该病发病急、传播快，主要症状为剧烈腹泻和呕吐，严重者可出现循环衰竭和肾功能衰竭，治疗不及时可导致死亡。驻莫桑比克使馆提醒在莫中国公民提高防护意识，注意饮用水和食品安全，特别是要饮用烧开的水。如出现呕吐、腹泻等症状应尽快就医。同时提醒即将赴莫中国公民提前做好预防措施，口服霍乱疫苗，抵莫后注意防范。根据国家质检总局近期公告，自莫赴华人员，应配合出入境检验检疫机构的医学巡查和体温监测等工作，如有呕吐、腹泻等症状，入境时应向出入境检验检疫机构申报。申报或现场查验发现有上述症状的人员，应接受出入境检验检疫机构的医学检查和采样检测。对发现的染疫人或染疫嫌疑人，出入境检验检疫机构将按规定程序采取医学措施。入境后5天内出现上述症状者，应当立即就医，并向医生说明近期的旅行史。来自莫的交通工具、集装箱等，出入境检验检疫机构将监督实施消毒等卫生处理。</p>
+				<img src="../../../assets/1.jpg" />
+				<p class="text">据中国驻莫桑比克使馆微信公众号消息，自2017年末以来，莫桑比克进入雨季，霍乱、疟疾等传染病多发，北部地区爆发小规模霍乱疫情。霍乱是由霍乱弧菌引起的烈性肠道传染病，潜伏期为5天，该病发病急、传播快，主要症状为剧烈腹泻和呕吐，严重者可出现循环衰竭和肾功能衰竭，治疗不及时可导致死亡。</p>
+				<p class="text">驻莫桑比克使馆提醒在莫中国公民提高防护意识，注意饮用水和食品安全，特别是要饮用烧开的水。如出现呕吐、腹泻等症状应尽快就医。同时提醒即将赴莫中国公民提前做好预防措施，口服霍乱疫苗，抵莫后注意防范。</p>
+				<p class="text">根据国家质检总局近期公告，自莫赴华人员，应配合出入境检验检疫机构的医学巡查和体温监测等工作，如有呕吐、腹泻等症状，入境时应向出入境检验检疫机构申报。申报或现场查验发现有上述症状的人员，应接受出入境检验检疫机构的医学检查和采样检测。对发现的染疫人或染疫嫌疑人，出入境检验检疫机构将按规定程序采取医学措施。入境后5天内出现上述症状者，应当立即就医，并向医生说明近期的旅行史。来自莫的交通工具、集装箱等，出入境检验检疫机构将监督实施消毒等卫生处理。</p>
 			</div>
 		</div>
 	</div>
@@ -20,7 +22,7 @@
 		name: 'newsDetail',
 		mounted() {
 			this.$nextTick(() => {
-				this.scroll = new BScroll(this.$refs.wrapper, {})
+				this.scroll = new BScroll(this.$refs.wrapper, {click: true})
 			})
 		}
 	}
@@ -46,30 +48,34 @@
 	}
 	
 	.content {
-		padding: 0.5rem;
+		padding: 0.8rem;
 		background: #fff;
 		text-align: left;
 		.title {
-			font-size: $large-textsize;
+			margin: 0;
+			font-size: 0.9rem;
 			color: $black-textcolor;
 			font-weight: 700;
-			
+			line-height: 1.3;
 		}
 		.tip {
-			font-size: $normal-textsize;
+			margin-bottom: 0.5rem;
+			font-size: $min-textsize;
 			color: $grey-textcolor;
 			span {
-				font-size: $small-textsize;
+				font-size: $min-textsize;
 			}
 		}
 		img {
 			width: 100%;
 		}
 		.text {
-			text-indent: 1rem;
-			text-align:justify;
-			font-size: $normal-textsize;
-			color: $black-textcolor;
+			margin-top: 0.5rem;
+			letter-spacing: 0.15rem;
+			line-height: 1.6;
+			text-align: justify;
+			font-size: 0.75rem;
+			color: #2f3437;
 		}
 	}
 </style>

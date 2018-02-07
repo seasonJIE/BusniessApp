@@ -2,7 +2,7 @@
 	<div class="tasklist">
 		<header id="header" class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>任务</span></a>
-			<h1 class="mui-title">中心代码库</h1>
+			<h1 class="mui-title">MES</h1>
 			<a class="right text">已办</a>
 		</header>
 		<div class="list">
@@ -59,16 +59,16 @@
 			margin-top: 44px;
 			.item {
 				position: relative;
-				padding: 0.5rem 2rem 0.5rem 0.5rem;
+				padding: 0.6rem 2rem 0.6rem 0.8rem;
 				background: #fff;
 				border-bottom: 1px solid #ddd;
 				text-align: left;
 				line-height: 1.5;
 				p {
-					margin: 0;
+					margin:0.1rem 0;
 					overflow: hidden;
-					font-size: $small-textsize;
-					color: $grey-textcolor;
+					font-size: $normal-textsize;
+					color: $black-textcolor;
 				}
 				.left {
 					float: left;
@@ -80,8 +80,8 @@
 					font-size: $min-textsize;
 					color: $grey-textcolor;
 				}
-				p:nth-child(2) {
-					color: $black-textcolor;
+				p:nth-child(3) {
+					color: $grey-textcolor;
 				}
 				i {
 					position: absolute;
@@ -124,7 +124,7 @@
 				display: block;
 				width: 40%;
 				height: 100%;
-				font-size: $small-textsize;
+				font-size: $normal-textsize;
 			}
 		}
 	}

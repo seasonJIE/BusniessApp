@@ -36,8 +36,8 @@
 		right: 0;
 		left: 0;
 		height:4.3rem;
-		padding-right: 0.5rem;
-		padding-left: 0.5rem;
+		padding-right: 0.8rem;
+		padding-left: 0.8rem;
 		background: url(~assets/headerbg.png) no-repeat center;
 		background-size:100%;
 		.topbar {
@@ -71,8 +71,8 @@
 				align-items: center;
 				padding: 0;
 				margin: 0;
-				right:2rem;
-				left: 2rem;
+				right:3rem;
+				left: 3rem;
 				width: auto;
 				height: 1.9rem;
 				span{
@@ -81,12 +81,13 @@
 					display: block;
 					height: 1.1rem;
 					line-height: 1.1rem;
-					width: 70%;
+					width: 90%;
 					background: rgba(255,255,255,0.3);
 					background-size: 0.8rem;
 					color: #fff;
 					opacity: 0.8;
 					font-size: 0.6rem;
+					border-radius: 0.1rem;
 					a {
 						display: inline-block;
 						padding-left: 0.9rem;

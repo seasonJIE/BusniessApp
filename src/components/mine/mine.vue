@@ -64,7 +64,7 @@
 	.mine {
 		.header {
 			position:relative;
-			margin-bottom:0.9rem;
+			margin-bottom:0.6rem;
 			background:#fff;
 			.code {
 				z-index: 2;
@@ -110,7 +110,7 @@
 					color: #fff;
 				}
 				.job {
-					font-size: $small-textsize;
+					font-size: $min-textsize;
 					
 				}
 			}
@@ -122,7 +122,7 @@
 					width: 33.33%;
 					
 					span,img {
-						margin: auto;
+						margin:0 auto 0.3rem auto;
 						display: block;
 						height: 1rem;
 						width: 1rem;

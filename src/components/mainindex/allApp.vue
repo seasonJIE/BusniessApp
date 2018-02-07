@@ -31,18 +31,18 @@
 						<i class="cut_icon"></i>
 					</div>
 					<div class="item">
-						<img src="../../assets/allapp/zuoyeguanli.png" />
-						<p>日程管理</p>
+						<img src="../../assets/allapp/jiagongjihua.png" />
+						<p>产量上报</p>
 						<i class="cut_icon"></i>
 					</div>
 					<div class="item">
-						<img src="../../assets/allapp/zuoyeguanli.png" />
-						<p>日程管理</p>
+						<img src="../../assets/allapp/gongzi.png" />
+						<p>成本费用</p>
 						<i class="cut_icon"></i>
 					</div>
 					<div class="item">
-						<img src="../../assets/allapp/zuoyeguanli.png" />
-						<p>日程管理</p>
+						<img src="../../assets/allapp/huodong.png" />
+						<p>产区基地</p>
 						<i class="cut_icon"></i>
 					</div>
 				</div>
@@ -72,21 +72,31 @@
 							<div class="item">
 								<img src="../../assets/allapp/zuoyeguanli.png" />
 								<p>日程管理</p>
-								<i class="add_icon"></i>
+								<i class="cut_icon"></i>
 							</div>
 							<div class="item">
 								<img src="../../assets/allapp/anquanjiancha.png" />
 								<p>会议室预定</p>
+								<i class="cut_icon"></i>
+							</div>
+							<div class="item">
+								<img src="../../assets/allapp/shenpi.png" />
+								<p>审批管理</p>
 								<i class="add_icon"></i>
 							</div>
 							<div class="item">
 								<img src="../../assets/allapp/yujing.png" />
 								<p>用车申请</p>
-								<i class="add_icon"></i>
+								<i class="cut_icon"></i>
 							</div>
 							<div class="item">
 								<img src="../../assets/allapp/chanqu.png" />
 								<p>客饭预定</p>
+								<i class="cut_icon"></i>
+							</div>
+							<div class="item">
+								<img src="../../assets/allapp/fuli.png" />
+								<p>办公用品</p>
 								<i class="add_icon"></i>
 							</div>
 						</div>
@@ -97,7 +107,7 @@
 							<div class="item">
 								<img src="../../assets/allapp/jiagongjihua.png" />
 								<p>产量上报</p>
-								<i class="add_icon"></i>
+								<i class="cut_icon"></i>
 							</div>
 							<div class="item">
 								<img src="../../assets/allapp/zuoyeguanli.png" />
@@ -127,11 +137,16 @@
 							<div class="item">
 								<img src="../../assets/allapp/gongzi.png" />
 								<p>成本费用</p>
-								<i class="add_icon"></i>
+								<i class="cut_icon"></i>
 							</div>
 							<div class="item">
 								<img src="../../assets/allapp/yujing.png" />
 								<p>薪金水平</p>
+								<i class="add_icon"></i>
+							</div>
+							<div class="item">
+								<img src="../../assets/allapp/jixiaoguanli.png" />
+								<p>数据报表</p>
 								<i class="add_icon"></i>
 							</div>
 							<div class="item">
@@ -157,7 +172,7 @@
 							<div class="item">
 								<img src="../../assets/allapp/huodong.png" />
 								<p>产区基地</p>
-								<i class="add_icon"></i>
+								<i class="cut_icon"></i>
 							</div>
 							<div class="item">
 								<img src="../../assets/allapp/anquanjiancha.png" />
@@ -253,7 +268,7 @@
 				this.watching_top = this.$refs.header.offsetHeight+'px';
 				this.alrering_top = this.$refs.header.offsetHeight + this.$refs.alter_div.offsetHeight + 'px';
 				this.top = this.watching_top;
-				this.scroll = new BScroll(this.$refs.wrapper, {});
+				this.scroll = new BScroll(this.$refs.wrapper, {click: true});
 				this.scroll.on('beforeScrollStart',()=>{
 					this.scroll.refresh();
 				});
@@ -283,7 +298,6 @@
 			color: $maincolor;
 			span {
 				position: absolute;
-				font-size: 0.6rem;
 			}
 		}
 		input {
@@ -322,6 +336,9 @@
 	.alter_div.altering {
 		transform: translateY(0);
 		.typeblock .itemblock .item {
+			background-color: #eee;
+			transition: background-color 600ms;
+			transition-delay: 400ms;
 			.cut_icon {
 				display: block !important;
 				opacity: 1;
@@ -365,7 +382,12 @@
 			padding-bottom: 0;
 			transition: all 400ms;
 		}
-		.add_icon {
+		.typeblock .itemblock .item {
+			background-color: #eee;
+			transition: background-color 600ms;
+			transition-delay: 400ms;
+		}
+		.add_icon,.cut_icon {
 			display: block !important;
 			opacity: 1;
 			height: 0.6rem;
@@ -385,6 +407,7 @@
 		text-align: left;
 		>div {
 			margin-top: 0.5rem;
+			padding:0.2rem 0.8rem;
 		}
 		img {
 			margin-right: 0.5rem;
@@ -402,8 +425,8 @@
 		.right {
 			float: right;
 			display: inline-block;
-			height: 0.7rem;
-			line-height: 0.7rem;
+			/*height: 0.7rem;
+			line-height: 0.7rem;*/
 			width: 1.5rem;
 			text-align: center;
 			font-size: $min-textsize;
@@ -418,19 +441,23 @@
 		padding: 0.5rem;
 		background: #fff;
 		.itemblock {
+			margin-top: 0.2rem;
 			display: flex;
 			flex-wrap: wrap;
 			.item {
+				margin: 0.1rem 1%;
 				position: relative;
 				padding-top: 0.6rem;
-				width: 25%;
+				padding-bottom: 0.2rem;
+				width: 23%;
 				img {
-					width: 1.3rem;
-					height: 1.3rem;
+					width: 1.2rem;
+					height: 1.2rem;
 				}
 				p {
 					margin: 0;
-					font-size: $normal-textsize;
+					/*margin-top: 0.1rem;*/
+					font-size: $small-textsize;
 					color: $black-textcolor;
 				}
 				.add_icon {

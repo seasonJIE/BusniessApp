@@ -96,7 +96,7 @@
 		overflow: hidden;
 		top: 0;
 		left: 0;
-		padding: 0 0.5rem;
+		padding: 0 0.8rem;
 		height: 1.9rem;
 		width: 100%;
 		background: $maincolor;

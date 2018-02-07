@@ -28,7 +28,7 @@
 				<img class="icon-png" src="../../assets/mainapp/tongji.png"></img>
 				<span class="text">统计</span>
 			</li>
-			<router-link tag="li" to="/main/mainindex/allapp">
+			<router-link  tag="li" to="/main/mainindex/allapp">
 				<img class="icon-png" src="../../assets/mainapp/all.png"></img>
 				<span class="text">全部</span>
 			</router-link>
@@ -45,6 +45,8 @@
 @import "~common/scss/baseColorSize";
 	.linklist {
 		overflow: hidden;
+		box-sizing:content-box;
+		padding:0.3rem 0;
 		display: flex;
 		justify-content: flex-start;
 		flex-wrap:wrap;
@@ -65,7 +67,8 @@
 				width: 1.4rem;
 			}
 			.text{
-				font-size:$small-textsize;
+				margin-top: 0.2rem;
+				font-size:$normal-textsize;
 				color:$black-textcolor;
 			}
 			

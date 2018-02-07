@@ -52,18 +52,21 @@
 		right: 0;
 		background: #fff;
 		.search_div {
+			padding:0 0.8rem;
 			margin-top:2.2rem;
+			display:flex;
+			align-items: center;
+			justify-content: center;
 			overflow:hidden;
 			background:#e8ecef;
-			height:1.9rem;
-			line-height:1.7rem;
+			height:2.1rem;
 			input {
 				margin: 0;
 				padding: 0;
 				padding-left: 1.3rem;
-				height: 1rem;
-				line-height: 1rem;
-				width: 92%;
+				height: 1.3rem;
+				line-height: 1.3rem;
+				width: 100%;
 				border: 1px solid #dce1e4;
 				background: url(../../../assets/icon/search.png) no-repeat 0.3rem center #fff;
 				background-size: 0.8rem;
@@ -72,6 +75,7 @@
 		}
 		.jituan {
 			display: flex;
+			padding: 0.2rem 0.8rem;
 			box-sizing: content-box;
 			justify-content: center;
 			align-items: center;
@@ -80,18 +84,19 @@
 			border-bottom: 0.7rem solid #e8ecef;
 			
 			> div {
-				width: 3.2rem;
+				width: 4.2rem;
 				.icon {
 					display: block;
 					margin: auto;
-					height: 1.3rem;
-					width: 1.3rem;
+					height: 1.5rem;
+					width: 1.5rem;
 					background: url(../../../assets/message/addresslist.png) no-repeat center;
 					background-size: 100%;
 				}
 				p {
 					margin: 0;
-					font-size: $normal-textsize;
+					margin-top: 0.2rem;
+					font-size: $small-textsize;
 					color: $black-textcolor;
 				}
 			}
@@ -109,7 +114,7 @@
 			.item {
 				position: relative;
 				overflow: hidden;
-				padding: 0.8rem;
+				padding:0.6rem 0.8rem;
 				height: 3rem;
 				line-height: 1.3;
 				border-bottom: 1px solid #ddd;
@@ -120,8 +125,8 @@
 				}
 				img {
 					float: left;
-					height: 1.3rem;
-					width: 1.3rem;
+					height: 1.5rem;
+					width: 1.5rem;
 					background: #ddd;
 					border-radius: 0.2rem;
 				}
@@ -131,7 +136,7 @@
 					text-align: left;
 					
 					p:nth-child(2) {
-						font-size: $small-textsize;
+						font-size: $min-textsize;
 						color: $grey-textcolor;
 					}
 				}

@@ -13,8 +13,8 @@
 				</div>
 			</div>
 			<img class="code" src="../../assets/code.png" />
-			<p class="text">扫一扫上面的二维码</p>
-			<p class="text">获取我的名片信息</p>
+			<p class="text">扫一扫获取我的名片信息</p>
+			<!--<p class="text">获取我的名片信息</p>-->
 		</div>
 		<div class="bottom">
 			<router-link to="/main/mine/mycode" class="minecode" tag="span">我的名片</router-link>
@@ -48,7 +48,7 @@
 			top:3.2rem;
 			left:1rem;
 			right:1rem;
-			padding:1rem;
+			padding:0.8rem;
 			height:18.5rem;
 			background:#fff;
 			border-radius:1rem;
@@ -75,6 +75,9 @@
 				p {
 					margin: 0;
 					line-height: 1.4;
+					font-size: $min-textsize;
+					color: $grey-textcolor;
+					
 				}
 			}
 			.code {
@@ -84,8 +87,8 @@
 			}
 			.text {
 				margin: 0.2rem;
-				font-size: $large-textsize;
-				color: $black-textcolor;
+				font-size: $normal-textsize;
+				color: $grey-textcolor;
 			}
 		}
 		.bottom {

@@ -38,7 +38,7 @@
 		name: 'Message',
 		mounted() {
 			this.$nextTick(() => {
-				this.scroll = new BScroll(this.$refs.wrapper, {})
+				this.scroll = new BScroll(this.$refs.wrapper, {click: true})
 			})
 		}
 	}
@@ -56,23 +56,23 @@
 		.one_memssage {
 			position: relative;
 			overflow: hidden;
-			height: 2.2rem;
+			padding:0.4rem 0.8rem;
 			border-bottom: 1px solid #ddd;
 			background: #fff;
 			img {
-				margin: 0.45rem 0.4rem 0.45rem 0.8rem;
+				margin: 0.2rem 0.4rem 0.3rem 0;
 				float: left;
-				height: 1.3rem;
-				width: 1.3rem;
+				height: 1.5rem;
+				width: 1.5rem;
 				border-radius: 0.1rem;
 				background: #ddd;
 			}
 			.headimg {
-				margin: 0.45rem 0.4rem 0.45rem 0.8rem;
+				margin: 0.2rem 0.4rem 0.3rem 0;
 				float: left;
-				height: 1.3rem;
-				line-height: 1.3rem;
-				width: 1.3rem;
+				height: 1.5rem;
+				line-height: 1.5rem;
+				width: 1.5rem;
 				text-align: center;
 				font-size: $min-textsize;
 				background: #F27847;
@@ -83,23 +83,22 @@
 				position: absolute;
 				padding: 0.1rem 0;
 				padding-right: 2.1rem;
-				left: 2.4rem;
+				left: 2.9rem;
 				right: 0;
-				height: 100%;
 				p {
-					margin: 0.2rem 0;
+					margin: 0;
 					line-height: 1.2;
 					text-align: left;
 					font-size: $normal-textsize;
 					color: $black-textcolor;
 					&:nth-child(2) {
-						font-size: $small-textsize;
+						margin-top: 0.2rem;
 						color: $grey-textcolor;
 					}
 				}
 				span {
 					position: absolute;
-					right: 0.5rem;
+					right: 0.8rem;
 					top: 50%;
 					margin-top: -0.5rem;
 					font-size: $min-textsize;

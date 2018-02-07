@@ -28,7 +28,7 @@
 <style lang="scss">
 	@import "~common/scss/style";
 	#app {
-		font-family: 'Avenir', Helvetica, Arial, sans-serif;
+		font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3";
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;

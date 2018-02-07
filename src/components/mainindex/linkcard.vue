@@ -1,7 +1,7 @@
 <template>
 	<div class="linkcard">
 		<div class="card">
-			<p class="title">审查注释
+			<p class="title">审批助手
 				<a class="more">更多</a>
 			</p>
 			<ul class="list">
@@ -22,9 +22,21 @@
 			<div id="echart_div" class="echarts_div" ref='mychart1'></div>
 		</div>
 		<div class="card">
-			<p class="title">审查注释</p>
-			<div id="echart_div" class="echarts_div" ref='mychart2'></div>
+			<p class="title">烟叶实时库存</p>
+			<!--<div id="echart_div" class="echarts_div" ref='mychart2'></div>-->
+			<img class="testimg" src="../../assets/s1.jpg" />
 		</div>
+		<div class="card" >
+			<p class="title">供应商年度配额</p>
+			<!--<div id="echart_div" class="echarts_div" ref='mychart2'></div>-->
+			<img class="testimg" style="height: 10rem;" src="../../assets/s3.jpg" />
+		</div>
+		<div class="card">
+			<p class="title">教育情况</p>
+			<!--<div id="echart_div" class="echarts_div" ref='mychart2'></div>-->
+			<img class="testimg"style="height: 10rem;" src="../../assets/s2.jpg" />
+		</div>
+		
 		<a class="user-defined">
 			<span></span>
 			<p>自定义</p>
@@ -38,23 +50,7 @@
 		name: 'Linkcard',
 		data() {
 			return {
-				option2: {
-					grid:{
-						left:'15%',
-						right:'10%',
-						top:'10%',
-						bottom:'20%'
-					},
-					xAxis: {
-						data: ["硬盒", "条盒", "纸箱", "内装纸", "薄膜", "滤棒"]
-					},
-					yAxis: {},
-					series: [{
-						name: '销量',
-						type: 'bar',
-						data: [5, 20, 36, 10, 10, 20]
-					}]
-				},
+				
 				option1: {
 					tooltip: {
 						trigger: 'item',
@@ -112,8 +108,8 @@
 			makeEchartCard() {
 				this.chart1 = echarts.init(this.$refs.mychart1);
 				this.chart1.setOption(this.option1);
-				this.chart2 = echarts.init(this.$refs.mychart2);
-				this.chart2.setOption(this.option2);
+//				this.chart2 = echarts.init(this.$refs.mychart2);
+//				this.chart2.setOption(this.option2);
 			}
 		}
 	}
@@ -126,30 +122,38 @@
 		z-index:1;
 		overflow: hidden;
 		.card {
+			overflow:hidden;
 			margin: 0.5rem auto;
+			padding:0 0.8rem;
 			background: #fff;
 			text-align: left;
+			.testimg {
+				margin-top: 0.3rem;
+				box-sizing: content-box;
+				padding-bottom: 0.6rem;
+				width: 100%;
+				height: 8rem;
+			}
+			
 			p {
 				margin: 0;
 			}
 			.title {
+				margin-top: 0.3rem;
 				overflow: hidden;
-				padding-left: 0.4rem;
-				font-size: $small-textsize;
+				font-size: $normal-textsize;
 				color: $grey-textcolor;
 				.more {
-					margin-right: 0.5rem;
 					float: right;
 					color: $grey-textcolor;
 				}
 			}
 			.list {
 				margin: auto;
-				width: 94%;
 				list-style: none;
 				li {
 					position: relative;
-					padding: 0.2rem;
+					padding: 0.6rem 0;
 					padding-left: 1rem;
 					border-bottom: 1px solid #ddd;
 					.content {
@@ -169,7 +173,7 @@
 				}
 				i {
 					position: absolute;
-					top: 0.65rem;
+					top: 0.95rem;
 					left: 0.5rem;
 					display: inline-block;
 					height: 0.2rem;
@@ -184,6 +188,8 @@
 			}
 			.echarts_div {
 				z-index: 1;
+				box-sizing: content-box;
+				padding-bottom: 0.6rem;
 			}
 		}
 		.user-defined {

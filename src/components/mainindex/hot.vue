@@ -3,7 +3,7 @@
 		<div class="hotpoint">
 			<a class="close" @click="hidehot"></a>
 			<router-link tag="div" to="/main/mainindex/hotdetail">
-				<img src="../../assets/tu.jpg">
+				<img src="../../assets/1.jpg">
 				<p>上海烟草开展基层单位党组织书记党性锻炼专题培训班</p>
 			</router-link>
 		</div>
@@ -63,13 +63,15 @@
 			background: #fff;
 			border-radius: 0.4rem;
 			img {
-				height: 9rem;
+				height: 8rem;
 				width: 100%;
 				border-radius: 0.4rem 0.4rem 0 0;
 			}
 			p {
+				line-height: 1.4;
 				margin: 0;
-				padding: 0.45rem;
+				padding:0.3rem 0.8rem;
+				padding-top: 0;
 				font-size: $large-textsize;
 				text-align: left;
 				color: $maincolor;

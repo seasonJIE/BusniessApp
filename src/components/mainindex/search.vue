@@ -11,11 +11,11 @@
 				<p>搜索指定内容</p>
 				<ul>
 					<li>新闻</li>
-					<li>新闻</li>
-					<li>新闻</li>
-					<li>新闻</li>
-					<li>新闻</li>
-					<li>新闻</li>
+					<li>活动</li>
+					<li>资讯</li>
+					<li>朋友</li>
+					<li>工作圈</li>
+					<li>其他</li>
 				</ul>
 			</div>
 			
@@ -48,7 +48,6 @@
 				padding: 0;
 				padding-left: 1.4rem;
 				margin: 0;
-				margin-right: 0.5rem;
 				height: 1.2rem;
 				line-height: 1.2rem;
 				font-size: 0.6rem;
@@ -61,7 +60,7 @@
 			.cancel {
 				margin-top: 0.1rem;
 				display: block;
-				width: 1.5rem;
+				width: 2rem;
 				height: 1.1rem;
 				line-height: 1.1rem;
 				font-size: $normal-textsize;
@@ -71,7 +70,7 @@
 				position: absolute;
 				display: block;
 				top: 0.75rem;
-				right: 2.6rem;
+				right: 2.8rem;
 				height: 0.7rem;
 				width: 0.7rem;
 				background: url(../../assets/icon/del.png) no-repeat center;
