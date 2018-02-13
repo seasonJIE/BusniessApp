@@ -64,7 +64,6 @@
 	@import "~common/scss/baseColorSize";
 	@import "~common/scss/resetMui";
 	.mail {
-		margin-top: 1.9rem;
 		.cricle-icon {
 			margin-top: 0.15rem;
 			display: inline-block;

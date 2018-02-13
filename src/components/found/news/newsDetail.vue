@@ -1,6 +1,6 @@
 <template>
 	<div class="newsdetail">
-		<header id="header" class="mui-bar mui-bar-nav">
+		<header id="header" ref="header" class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>首页</span></a>
 		</header>
 		<div class="wrapper" ref="wrapper">
@@ -40,7 +40,7 @@
 	
 	.wrapper {
 		position: absolute;
-		top: 2.2rem;
+		top: $totop;
 		bottom: 0;
 		left: 0;
 		right: 0;

@@ -85,7 +85,7 @@
 		background: #fff;
 		.wrapper {
 			position: absolute;
-			top: 2.2rem;
+			top: $totop;
 			bottom: 40px;
 			width: 100%;
 		}
@@ -194,19 +194,20 @@
 			right: 0;
 			height: 40px;
 			line-height: 40px;
-			background: $maincolor;
+			border-top: 1px solid #ddd;
+			background: #fff;
 			a {
 				position: absolute;
 				left: 0;
 				width: 60px;
 				top: 0;
 				bottom: 0;
-				color: #fff;
+				color: #535456;
 				text-align: center;
 				font-size: 12px;
 			}
 			p {
-				color: #fff;
+				color: #535456;
 				font-size: 12px;
 			}
 		}

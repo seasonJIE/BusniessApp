@@ -77,7 +77,7 @@
 		}
 		.top {
 			position: relative;
-			margin-top: 2.2rem;
+			margin-top: $totop;
 			padding: 0.8rem;
 			p {
 				span {
@@ -145,29 +145,32 @@
 			align-items: center;
 			height: 38px;
 			width: 100%;
-			background: $maincolor;
+			background: #fff;
+			border-top: 1px solid #ddd;
 			a {
 				display: block;
 				height: 100%;
 				width: 20%;
-				background: url(../../../assets/icon/mail_resend.png) no-repeat center;
-				background-size: 1.2rem;
 			}
 			a:nth-child(1) {
 				background: url(../../../assets/message/inbox1.png) no-repeat center;
-				background-size: 0.8rem;
+				background-size: 1rem;
 			}
 			a:nth-child(2) {
 				background: url(../../../assets/message/inbox2.png) no-repeat center;
-				background-size: 0.8rem;
+				background-size: 1rem;
 			}
 			a:nth-child(3) {
 				background: url(../../../assets/message/inbox3.png) no-repeat center;
-				background-size: 0.8rem;
+				background-size: 1rem;
+			}
+			a:nth-child(4) {
+				background: url(../../../assets/message/inbox4.png) no-repeat center;
+				background-size: 1rem;
 			}
 			a:nth-child(5) {
 				background: url(../../../assets/message/inbox5.png) no-repeat center;
-				background-size: 0.8rem;
+				background-size: 1rem;
 			}
 		}
 	}

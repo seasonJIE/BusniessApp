@@ -1,7 +1,7 @@
 <template>
 	<div class="found">
 		<my-header></my-header>
-		<router-view></router-view>
+		<router-view class="router"></router-view>
 	</div>
 </template>
 
@@ -16,10 +16,8 @@
 </script>
 
 <style scoped lang="scss">
-	.found {
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
+@import "~common/scss/baseColorSize";
+	.news,.workring,.activity {
+		top: $totop;
 	}
 </style>

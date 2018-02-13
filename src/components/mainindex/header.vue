@@ -35,10 +35,11 @@
 		z-index: 10;
 		right: 0;
 		left: 0;
-		height:4.3rem;
+		height:5rem;
+		padding-top:0.9rem;
 		padding-right: 0.8rem;
 		padding-left: 0.8rem;
-		background: url(~assets/headerbg.png) no-repeat center;
+		background: url(~assets/headerbg.jpg) no-repeat top center;
 		background-size:100%;
 		.topbar {
 			overflow:hidden;
@@ -100,8 +101,8 @@
 		}
 		.text {
 			margin: 0;
-			height: 2.4rem;
-			line-height: 2.4rem;
+			height: 2rem;
+			line-height: 2rem;
 			color: #fff;
 			font-size: 0.9rem;
 		}

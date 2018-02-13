@@ -53,7 +53,7 @@
 		background: #fff;
 		.search_div {
 			padding:0 0.8rem;
-			margin-top:2.2rem;
+			margin-top:$totop;
 			display:flex;
 			align-items: center;
 			justify-content: center;

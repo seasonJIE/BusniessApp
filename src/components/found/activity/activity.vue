@@ -28,7 +28,7 @@
 						<p><span class="title left">集团公司举办兼职培训师进修班</span>
 							<a class="apart_btn right">参加</a>
 						</p>
-						<p><span class="left">金燕培训基地举办2017年度兼职培训师进修班</span><span class="right">已参赛23人</span></p>
+						<p><span class="left">金燕培训基地举办培训师进修班</span><span class="right">已参赛23人</span></p>
 					</div>
 				</div>
 				<div class="controll_div">
@@ -46,7 +46,7 @@
 						<p><span class="title left">一站到底</span>
 							<a class="apart_btn right">参加</a>
 						</p>
-						<p><span class="left">宝山烟草积极开展“法律伴我行”普法竞赛 </span><span class="right">已参赛38人</span></p>
+						<p><span class="left">宝山烟草开展“法律伴我行”普法竞赛 </span><span class="right">已参赛38人</span></p>
 					</div>
 				</div>
 				<div class="controll_div">
@@ -79,7 +79,7 @@
 	}
 	.wrapper {
 		position: absolute;
-		top: 1.9rem;
+		top: $totop;
 		bottom: 50px;
 		width: 100%;
 	}

@@ -1,7 +1,7 @@
 <template>
 	<div class="mycode">
 		<header id="header" class="mui-bar mui-bar-nav">
-		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		</header>
 		<div class="code_div">
 			<div class="top">
@@ -12,20 +12,29 @@
 					<p>信息中心运维科&nbsp;&nbsp;科长</p>
 				</div>
 			</div>
-			<img class="code" src="../../assets/code.png" />
+			<img class="code" src="../../assets/code.jpg" />
 			<p class="text">扫一扫获取我的名片信息</p>
 			<!--<p class="text">获取我的名片信息</p>-->
 		</div>
 		<div class="bottom">
 			<router-link to="/main/mine/mycode" class="minecode" tag="span">我的名片</router-link>
-			<router-link to="/main/code" tag="span" class="tocode">扫一扫</router-link>
+			<span class="tocode" @click="code">扫一扫</span>
 		</div>
 	</div>
 </template>
 
 <script>
 	export default {
-		name:'MyCode'
+		name: 'MyCode',
+		methods: {
+			code() {
+				if(wmf) {
+					wmf.scaner(function(result) {
+						mui.alert(result, " ");
+					});
+				}
+			}
+		}
 	}
 </script>
 
@@ -36,40 +45,39 @@
 		background: none;
 		box-shadow: none;
 		.mui-action-back {
-			color:$header-activetextcolor;
+			color: $header-activetextcolor;
 		}
 	}
+	
 	.mycode {
-		background: url(../../assets/enter_bg.jpg) no-repeat center;
+		background: url(../../assets/enter_bg.jpg) center;
 		background-size: 100%;
-		
 		.code_div {
-			position:absolute;
-			top:3.2rem;
-			left:1rem;
-			right:1rem;
-			padding:0.8rem;
-			height:18.5rem;
-			background:#fff;
-			border-radius:1rem;
-			box-shadow:0px 6px 6px #333;
-			
+			position: absolute;
+			top: 3.2rem;
+			left: 1rem;
+			right: 1rem;
+			padding: 0.8rem;
+			height: 18.5rem;
+			background: #fff;
+			border-radius: 1rem;
+			box-shadow: 0px 6px 6px #333;
 			.top {
-				display:flex;
+				display: flex;
 				overflow: hidden;
 				text-align: left;
 				.left {
-					margin-right:0.5rem;
-					width:2.5rem;
-					height:2.5rem;
-					background:#ddd;
+					margin-right: 0.5rem;
+					width: 2.5rem;
+					height: 2.5rem;
+					background: #ddd;
 				}
 				.right {
 					font-size: $small-textsize;
-					color:$grey-textcolor;
+					color: $grey-textcolor;
 					.name {
 						font-size: $normal-textsize;
-						color:$black-textcolor;
+						color: $black-textcolor;
 					}
 				}
 				p {
@@ -77,7 +85,6 @@
 					line-height: 1.4;
 					font-size: $min-textsize;
 					color: $grey-textcolor;
-					
 				}
 			}
 			.code {
@@ -99,10 +106,9 @@
 			justify-content: center;
 			align-items: center;
 			width: 100%;
-			
 			span {
 				display: block;
-				padding-top:1.9rem;
+				padding-top: 1.9rem;
 				width: 40%;
 				height: 3rem;
 				color: #fff;

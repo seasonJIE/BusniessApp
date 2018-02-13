@@ -97,7 +97,8 @@
 		top: 0;
 		left: 0;
 		padding: 0 0.8rem;
-		height: 1.9rem;
+		padding-top:0.9rem;
+		height: 2.8rem;
 		width: 100%;
 		background: $maincolor;
 		.tab {

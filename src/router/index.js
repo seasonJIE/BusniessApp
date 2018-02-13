@@ -28,6 +28,12 @@ import Workring from 'components/found/workring/workring'
 import Mine from 'components/mine/mine'
 import MyCode from 'components/mine/mycode'
 import PersonalFile from 'components/mine/personalFile'
+
+import TextFile from 'components/codeto/textfile'
+import Materiel from 'components/codeto/materiel'
+import Equipment from 'components/codeto/equipment'
+import Product from 'components/codeto/product'
+import People from 'components/codeto/people'
 Vue.use(Router)
 
 export default new Router({
@@ -171,6 +177,31 @@ export default new Router({
 			path: '/main/mine/mycode',
 			name: 'MyCode',
 			component: MyCode
+		},
+		{
+			path: '/main/codeto/textfile',
+			name: 'TextFile',
+			component: TextFile
+		},
+		{
+			path: '/main/codeto/materiel',
+			name: 'Materiel',
+			component: Materiel
+		},
+		{
+			path: '/main/codeto/equipment',
+			name: 'Equipment',
+			component: Equipment
+		},
+		{
+			path: '/main/codeto/product',
+			name: 'Product',
+			component: Product
+		},
+		{
+			path: '/main/codeto/people',
+			name: 'People',
+			component: People
 		},
 		{
 			path: '/main/code',

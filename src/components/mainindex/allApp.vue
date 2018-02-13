@@ -9,7 +9,7 @@
 				<p class="title">我的应用
 					<span class="right" @click="finish">完成</span>
 				</p>
-				<div class="itemblock">
+				<div id="myappblock" ref="myappblock" class="itemblock">
 					<div class="item">
 						<img src="../../assets/allapp/zuoyeguanli.png" />
 						<p>日程管理</p>
@@ -250,8 +250,8 @@
 		data() {
 			return {
 				isAlter: false,
-				alrering_top:0,
-				watching_top:0
+				alrering_top: 0,
+				watching_top: 0
 			}
 		},
 		computed: {
@@ -265,13 +265,16 @@
 		},
 		mounted() {
 			this.$nextTick(() => {
-				this.watching_top = this.$refs.header.offsetHeight+'px';
+				this.watching_top = this.$refs.header.offsetHeight + 'px';
 				this.alrering_top = this.$refs.header.offsetHeight + this.$refs.alter_div.offsetHeight + 'px';
 				this.top = this.watching_top;
-				this.scroll = new BScroll(this.$refs.wrapper, {click: true});
-				this.scroll.on('beforeScrollStart',()=>{
+				this.scroll = new BScroll(this.$refs.wrapper, {
+					click: true
+				});
+				this.scroll.on('beforeScrollStart', () => {
 					this.scroll.refresh();
 				});
+				dragula([this.$refs.myappblock])
 			});
 		},
 		methods: {
@@ -286,6 +289,7 @@
 </script>
 
 <style scoped lang="scss">
+	@import "node_modules/dragula/dist/dragula";
 	@import "~common/scss/baseColorSize";
 	@import "~common/scss/resetMui";
 	#header {
@@ -320,7 +324,7 @@
 		z-index: 3;
 		position: absolute;
 		margin-bottom: 0.2rem;
-		top: 2.1rem;
+		top: $totop;
 		left: 0;
 		width: 100%;
 		transform: translateY(-3rem);
@@ -336,7 +340,7 @@
 	.alter_div.altering {
 		transform: translateY(0);
 		.typeblock .itemblock .item {
-			background-color: #eee;
+			background-color: #fafafa;
 			transition: background-color 600ms;
 			transition-delay: 400ms;
 			.cut_icon {
@@ -346,6 +350,22 @@
 				transition: opacity 600ms;
 				transition-delay: 400ms;
 			}
+		}
+	}
+	
+	.item.gu-mirror {
+		position: relative;
+		padding-top: 0.6rem;
+   	 	padding-bottom: 0.2rem;
+   	 	background: #fafafa;
+   	 	text-align: center;
+   	 	p {
+   	 		font-size: $small-textsize;
+   	 	}
+		img {
+			margin: auto;
+			width: 1.2rem;
+			height: 1.2rem;
 		}
 	}
 	
@@ -359,12 +379,12 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		top: 2.1rem;
+		top: $totop;
 		transition: all 400ms;
 	}
 	
 	#wrapper.watching {
-		top: 2.1rem;
+		top: $totop;
 		.myapp {
 			height: 3.8rem;
 			padding: 0.5rem;
@@ -383,11 +403,12 @@
 			transition: all 400ms;
 		}
 		.typeblock .itemblock .item {
-			background-color: #eee;
+			background-color: #fafafa;
 			transition: background-color 600ms;
 			transition-delay: 400ms;
 		}
-		.add_icon,.cut_icon {
+		.add_icon,
+		.cut_icon {
 			display: block !important;
 			opacity: 1;
 			height: 0.6rem;
@@ -407,7 +428,7 @@
 		text-align: left;
 		>div {
 			margin-top: 0.5rem;
-			padding:0.2rem 0.8rem;
+			padding: 0.2rem 0.8rem;
 		}
 		img {
 			margin-right: 0.5rem;

@@ -49,7 +49,7 @@
 	.message {
 		.wrapper {
 			position: absolute;
-			top: 1.9rem;
+			top: 0;
 			bottom: 50px;
 			width: 100%;
 		}

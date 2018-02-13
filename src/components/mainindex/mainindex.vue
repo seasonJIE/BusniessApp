@@ -23,7 +23,9 @@
 		name: 'Mainindex',
 		mounted() {
 			this.$nextTick(() => {
-				this.scroll = new BScroll(this.$refs.wrapper, {click: true})
+				this.scroll = new BScroll(this.$refs.wrapper, {
+					click: true
+				})
 			})
 		},
 		components: {
@@ -38,7 +40,7 @@
 <style scoped lang="scss">
 	.wrapper {
 		position: absolute;
-		top: 4.3rem;
+		top: 5rem;
 		bottom: 50px;
 		width: 100%;
 	}

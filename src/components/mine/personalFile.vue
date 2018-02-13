@@ -82,7 +82,7 @@
 	
 	.personalfile {
 		.mui-table-view {
-			margin-top:2.2rem;
+			margin-top:$totop;
 			.left {
 				float: left;
 				margin: 0;

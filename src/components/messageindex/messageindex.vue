@@ -16,4 +16,8 @@
 </script>
 
 <style scoped lang="scss">
+@import "~common/scss/baseColorSize";
+	.message,.mail,.task,.addresslist {
+		top:$totop;
+	}
 </style>

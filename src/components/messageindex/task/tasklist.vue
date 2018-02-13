@@ -8,7 +8,7 @@
 		<div class="list">
 			<div class="item" v-for="item in itemlist" :class="{active:item.isSelected}">
 				<p><span class="left">卓蔚</span><span class="right">10:00</span></p>
-				<p>关于中心代码库更新的通知</p>
+				<p>关于中心代码库更新的申请</p>
 				<p>信息中心运维科</p>
 				<i class="mui-icon mui-icon-checkmarkempty" @click="itemselected(item)"></i>
 			</div>
@@ -56,7 +56,7 @@
 		left: 0;
 		right: 0;
 		.list {
-			margin-top: 44px;
+			margin-top: $totop;
 			.item {
 				position: relative;
 				padding: 0.6rem 2rem 0.6rem 0.8rem;

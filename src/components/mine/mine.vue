@@ -10,15 +10,15 @@
 			</div>
 			<div class="btn_div">
 				<router-link to="/main/mine/personalfile" tag="div">
-					<img src="../../assets/mine/档案.png" />
+					<img src="../../assets/mine/file.png" />
 					<p>档案</p>
 				</router-link>
 				<div>
-					<img src="../../assets/mine/福利.png" />
+					<img src="../../assets/mine/gift.png" />
 					<p>福利</p>
 				</div>
 				<div>
-					<img src="../../assets/mine/活动.png" />
+					<img src="../../assets/mine/activity.png" />
 					<p>活动</p>
 				</div>
 			</div>
@@ -71,10 +71,10 @@
 				display: block;
 				position: absolute;
 				right: 0.8rem;
-				top: 0.8rem;
+				top: 1.2rem;
 				height: 1.3rem;
 				width: 1.3rem;
-				background: url(../../assets/icon/code.png) no-repeat center;
+				background: url(../../assets/icon/code.png) no-repeat  center; 
 				background-size: 100%;
 			}
 			.top {
@@ -83,6 +83,7 @@
 				justify-content: center;
 				align-items: center;
 				flex-flow: column;
+				padding-top: 0.9rem;
 				height: 8.6rem;
 				width: 100%;
 				background:url(../../assets/mine_bg.png) no-repeat center -7rem;
@@ -117,6 +118,7 @@
 			.btn_div {
 				display: flex;
 				justify-content: center;
+				height: 3.5rem;
 				> div {
 					padding: 0.5rem;
 					width: 33.33%;

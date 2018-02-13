@@ -115,13 +115,12 @@
 	.wrapper {
 		z-index: 1;
 		position: absolute;
-		top: 5.7rem;
+		top: 3.8rem;
 		bottom: 50px;
 		width: 100%;
 	}
 	
 	.news {
-		margin-top: 1.9rem;
 		.top_tab {
 			position: relative;
 			z-index: 2;

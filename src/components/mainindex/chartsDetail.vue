@@ -4,56 +4,61 @@
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>首页</span></a>
 			<h1 class="mui-title">辅料库存情况</h1>
 		</header>
-		<div class="echarts_div">
-			<p>材料库存占比</p>
-			<div class="select_div">
-				<select class="left">
-					<option>2017年8月</option>
-				</select>
-				<select class="right">
-					<option>15薪厂房四楼库存</option>
-				</select>
-			</div>
-			<div id="echart_div" ref='mychart'></div>
-		</div>
+		<div class="wrapper" ref="wrapper">
+			<div>
+				<div class="echarts_div">
+					<p>材料库存占比</p>
+					<div class="select_div">
+						<select class="left">
+							<option>2017年8月</option>
+						</select>
+						<select class="right">
+							<option>15薪厂房四楼库存</option>
+						</select>
+					</div>
+					<div id="echart_div" ref='mychart'></div>
+				</div>
 
-		<div class="data_div">
-			<div>
-				<p>
-					<span>月初</span>
-					<span>20</span>
-				</p>
-			</div>
-			<div>
-				<p>
-					<span>月末</span>
-					<span>22</span>
-				</p>
-			</div>
-			<div>
-				<p>
-					<span>最高</span>
-					<span>12</span>
-				</p>
+				<div class="data_div">
+					<div>
+						<p>
+							<span>月初</span>
+							<span>20</span>
+						</p>
+					</div>
+					<div>
+						<p>
+							<span>月末</span>
+							<span>22</span>
+						</p>
+					</div>
+					<div>
+						<p>
+							<span>最高</span>
+							<span>12</span>
+						</p>
 
-			</div>
-			<div>
-				<p>
-					<span>最低</span>
-					<span>2</span>
-				</p>
-			</div>
-			<div>
-				<p>
-					<span>吞吐量</span>
-					<span>50</span>
-				</p>
+					</div>
+					<div>
+						<p>
+							<span>最低</span>
+							<span>2</span>
+						</p>
+					</div>
+					<div>
+						<p>
+							<span>吞吐量</span>
+							<span>50</span>
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import BScroll from 'better-scroll'
 	import echarts from 'static/echarts.min.js'
 	export default {
 		name: 'ChartsDetail',
@@ -66,14 +71,14 @@
 					},
 					legend: {
 						orient: 'horizontal',
-						itemGap:16,
-						itemWidth:10,
-						itemHeight:10,
+						itemGap: 16,
+						itemWidth: 10,
+						itemHeight: 10,
 						left: 0,
-						bottom:0,
-						data: ['硬盒', '条盒', '纸箱', '内装纸', '内衬纸','薄膜','滤棒'],
-						textStyle:{
-							fontSize:14
+						bottom: 0,
+						data: ['硬盒', '条盒', '纸箱', '内装纸', '内衬纸', '薄膜', '滤棒'],
+						textStyle: {
+							fontSize: 14
 						}
 					},
 					series: [{
@@ -115,6 +120,11 @@
 			}
 		},
 		mounted() {
+			this.$nextTick(() => {
+				this.scroll = new BScroll(this.$refs.wrapper, {
+					click: true
+				})
+			});
 			this.makeEchartCard()
 		},
 		methods: {
@@ -130,12 +140,17 @@
 	@import "~common/scss/baseColorSize";
 	@import "~common/scss/resetMui";
 	.charts-detail {
-		
 		background: #fff;
+	}
+	.wrapper {
+		position: absolute;
+		top: $totop;
+		bottom: 0;
+		left: 0;
+		right: 0;
 	}
 	.echarts_div {
 		overflow: hidden;
-		margin-top: 2.2rem;
 		padding: 0.6rem 0.8rem;
 		width: 100%;
 		height: 17rem;
@@ -196,7 +211,7 @@
 				span:nth-child(2) {
 					margin-right: 1rem;
 					margin-top: 0.5rem;
-					margin-bottom:0.1rem;
+					margin-bottom: 0.1rem;
 					float: right;
 					font-size: 1.2rem;
 					color: #3378a2;

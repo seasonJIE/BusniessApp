@@ -44,7 +44,6 @@
 	@import "~common/scss/baseColorSize";
 	@import "~common/scss/resetMui";
 	.task {
-		margin-top: 1.9rem;
 		.light {
 			color:$light-color;
 		}

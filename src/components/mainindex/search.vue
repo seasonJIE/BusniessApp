@@ -38,8 +38,9 @@
 			position:absolute;
 			display: flex;
 			padding:0.5rem;
+			padding-top:1.4rem;
 			overflow: hidden;
-			height: 2.2rem;
+			height: 3.1rem;
 			width: 100%;
 			background: #f1f4f5;
 			border-bottom: 1px solid #e3e6e6;
@@ -69,7 +70,7 @@
 			.clear {
 				position: absolute;
 				display: block;
-				top: 0.75rem;
+				top: 1.65rem;
 				right: 2.8rem;
 				height: 0.7rem;
 				width: 0.7rem;

@@ -65,11 +65,10 @@
 <style scoped lang="scss">
 	@import "~common/scss/baseColorSize";
 	.workring {
-		margin-top: 1.9rem;
 		padding-bottom: 50px;
 		.wrapper {
 			position: absolute;
-			top: 4.2rem;
+			top: 2.3rem;
 			bottom: 50px;
 			width: 100%;
 		}

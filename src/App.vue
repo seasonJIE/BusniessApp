@@ -14,8 +14,13 @@
 				transitionName: 'slide-left'
 			}
 		},
+		mounted(){
+			wmf.ready(function() {
+				wmf.setBarSyleWithBackgroundColor(1,'#1f4d66',function(){});
+			});
+		},
 		watch: {
-			'$route' (to, from) {
+			'$route' (to, from) {	
 				let isBack = this.$router.isBack;
 				const toDepth = to.path.split('/').length;
 				const fromDepth = from.path.split('/').length;
@@ -57,10 +62,8 @@
 		-webkit-transform: translate(-100%, 0);
 		transform: translate(-100% 0);
 	}
-	.slide-left-enter,
-	.slide-right-leave-active {
-		opacity: 0;
-		-webkit-transform: translate(100%, 0);
-		transform: translate(100%, 0);
+	
+	.slide-left-leave-active,.slide-right-leave-active {
+		transition-delay: .05s;
 	}
 </style>

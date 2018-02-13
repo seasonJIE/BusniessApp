@@ -46,7 +46,7 @@
 		background: #fff;
 		
 		ul {
-			margin-top:2.2rem;
+			margin-top:$totop;
 			li {
 				position: relative;
 				overflow: hidden;

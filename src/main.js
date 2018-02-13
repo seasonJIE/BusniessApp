@@ -11,6 +11,7 @@ Vue.use(VueLazyload,{
 Vue.prototype.routerto = function (path){
 	this.$router.push(path);
 }
+
 new Vue({
   el: '#app',
   router,

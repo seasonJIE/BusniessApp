@@ -5,28 +5,44 @@
 		<input class="password" type="password" />
 		<a>忘记密码</a>
 		<button @click="enter">登录</button>
+		<a class="renew" @click="renew">强制更新</a>
 	</div>
 </template>
 
 <script>
 	export default {
 		name: 'Enter',
+		mounted(){
+			
+			this.$nextTick(() => {});
+		},
 		methods:{
 			enter() {
 				this.$router.push('/main');
+			},
+			renew(){
+				wmf.localAppUpdate();
 			}
 		}
 	}
 </script>
 
 <style scoped lang="scss">
+.renew {
+	position: absolute;
+	bottom: 1rem;
+	right: 0.8rem;
+	color: #fff;
+	font-size: 0.6rem;
+}
 	.enter {
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
 		padding: 0 1.5rem;
-		background: url(../assets/enter_bg.jpg) no-repeat center;
+		padding-top: 0.9rem;
+		background: url(../assets/enter_bg.jpg) top center;
 		background-size: 100%;
 		img {
 			margin: 1.5rem auto;
