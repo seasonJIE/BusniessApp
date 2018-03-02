@@ -1,7 +1,7 @@
 <template>
 	<div class="inbox">
 		<header id="header" class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span>邮箱</span></a>
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"><span v-text="fromPage"></span></a>
 			<h1 class="mui-title">收件箱</h1>
 			<router-link to="/main/messageindex/mail/inbox/newmail" class="right write"></router-link>
 		</header>
@@ -66,10 +66,21 @@
 	import BScroll from 'better-scroll'
 	export default {
 		name: 'Inbox',
+		data(){
+			return {
+				fromPage:'邮箱'
+			}
+		},
 		mounted() {
+			this.whichfromPage();
 			this.$nextTick(() => {
 				this.scroll = new BScroll(this.$refs.wrapper, {click: true})
 			})
+		},
+		methods:{
+			whichfromPage() {
+				this.$route.params.fromPage?this.fromPage='首页':'';
+			}
 		}
 	}
 </script>

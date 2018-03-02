@@ -105,7 +105,6 @@
 			position: absolute;
 			left: 2rem;
 			right: 2rem;
-			height: 100%;
 			list-style: none;
 			display: flex;
 			justify-content: center;
@@ -156,8 +155,8 @@
 			}
 		}
 		.btn {
-			margin-top: 0.45rem;
-			padding: 0.5rem;
+			/*margin-top: 0.45rem;*/
+			padding: 1rem;
 			font-size: 1.2rem;
 			position: relative;
 			z-index: 20;
@@ -168,20 +167,20 @@
 				float: right;
 			}
 			&.plus {
-				background: url(../../assets/icon/plus-icon.png) no-repeat center;
-				background-size: 100%;
+				background: url(../../assets/icon/plus-icon.png) no-repeat center 0.45rem;
+				background-size: 1rem;
 			}
 			&.search {
-				background: url(../../assets/icon/message-search.png) no-repeat center;
-				background-size: 100%;
+				background: url(../../assets/icon/message-search.png) no-repeat center 0.45rem;
+				background-size: 1rem;
 			}
 			&.write {
-				background: url(../../assets/icon/write.png) no-repeat center;
-				background-size: 100%;
+				background: url(../../assets/icon/write.png) no-repeat center 0.45rem;
+				background-size: 1rem;
 			}
 			&.addfriend {
-				background: url(../../assets/icon/addPeople.png) no-repeat center;
-				background-size: 100%;
+				background: url(../../assets/icon/addPeople.png) no-repeat center 0.45rem;
+				background-size: 1rem;
 			}
 		}
 	}

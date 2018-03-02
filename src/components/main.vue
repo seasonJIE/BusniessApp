@@ -1,6 +1,6 @@
 <template>
 	<div id="main">
-		<router-view class='router'></router-view>
+		<router-view></router-view>
 		<b-tabbar></b-tabbar>
 	</div>
 </template>
@@ -16,4 +16,5 @@
 </script>
 
 <style scoped>
+	
 </style>

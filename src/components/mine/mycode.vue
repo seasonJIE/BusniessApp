@@ -20,18 +20,54 @@
 			<router-link to="/main/mine/mycode" class="minecode" tag="span">我的名片</router-link>
 			<span class="tocode" @click="code">扫一扫</span>
 		</div>
+		<div class="codewait" v-if="wait">
+			<div>
+				<p>识别中...</p>
+				<span></span>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
 	export default {
 		name: 'MyCode',
+		data(){
+			return{
+				wait:false
+			}
+		},
 		methods: {
 			code() {
 				if(wmf) {
-					wmf.scaner(function(result) {
-						mui.alert(result, " ");
+//					打开等待画面
+					this.wait = true;
+					wmf.scaner((result) => {
+						if(result == 'sys:cancel') {
+//							关闭等待画面
+							this.wait = false;
+							wmf.closeScaner();
+						} else {
+							wmf.closeScaner();
+//							跳转页面
+							setTimeout(() => {
+								if(result == 'face') { //	扫脸
+									this.$router.push('/main/codeto/people')
+								} else if(result == 'F_HYZG_2017000057') { //扫文件
+									this.$router.push('/main/codeto/textfile')
+								} else if(result == '6901028076067') { //香烟产品条形码
+									this.$router.push('/main/codeto/product');
+								} else if(result == 'DE_PCZW00001') { //设备
+									this.$router.push('/main/codeto/equipment')
+								} else if(result == 'YY_RFID11KY22024B50081110901105154') { //物料
+									this.$router.push('/main/codeto/materiel')
+								} else {
+									alert(result);
+								}
+							}, 100);
+						}
 					});
+
 				}
 			}
 		}
@@ -48,7 +84,10 @@
 			color: $header-activetextcolor;
 		}
 	}
-	
+	.mui-pull-left {
+		padding: 1rem !important;
+		padding-top: 0.3rem !important;
+	}
 	.mycode {
 		background: url(../../assets/enter_bg.jpg) center;
 		background-size: 100%;
@@ -122,6 +161,40 @@
 				background: url(../../assets/icon/tocode.png) no-repeat center 0.8rem;
 				background-size: 0.9rem;
 			}
+		}
+	}
+	.codewait {
+		position: absolute;
+		z-index: 999;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #fff;
+		p {
+			font-size: $normal-textsize;
+			color: $black-textcolor;
+		}
+		span {
+			margin: auto;
+			display: block;
+			height: 1.6rem;
+			width: 1.6rem;
+			background: url(../../assets/icon/wait-icon.png) no-repeat center;
+			background-size: 100%;
+			animation: turnround 1s linear infinite;
+		}
+	}
+	
+	@keyframes turnround {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
 		}
 	}
 </style>

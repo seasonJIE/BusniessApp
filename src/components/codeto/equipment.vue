@@ -2,7 +2,7 @@
 	<div class="equipment">
 		<div class="header">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<router-link to="/main/mine/mycode" class="code"></router-link>
+			<!--<router-link to="/main/mine/mycode" class="code"></router-link>-->
 			<div class="top">
 				<img src="../../assets/equipment.png" />
 				<p>笔记本</p>

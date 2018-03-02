@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 import Enter from 'components/enter'
 import Main from 'components/main'
-import Code from 'components/code'
 
 import Mainindex from 'components/mainindex/mainindex'
 import IndexSearch from 'components/mainindex/search'
@@ -58,7 +57,11 @@ export default new Router({
 			children: [{
 					path: 'mainindex',
 					name: 'Mainindex',
-					component: Mainindex
+					component: Mainindex,
+					children:[{
+						path: 'allapp',
+						component: AllApp,
+					}]
 				},
 				{
 					path: 'messageindex',
@@ -73,7 +76,7 @@ export default new Router({
 						component: Message
 					},
 					{
-						path: 'mail',
+						path: 'mail',  //邮箱
 						name: 'Mail',
 						component: Mail
 					},
@@ -128,18 +131,18 @@ export default new Router({
 			name: 'ChartsDetail',
 			component: ChartsDetail
 		},
-		{
-			path: '/main/mainindex/allapp',
-			name: 'AllApp',
-			component: AllApp
-		},
+//		{
+//			path: '/main/mainindex/allapp',
+//			name: 'AllApp',
+//			component: AllApp
+//		},
 		{
 			path: '/main/mainindex/hotdetail',
 			name: 'NewsDetail',
 			component: NewsDetail
 		},
-		{
-			path: '/main/messageindex/mail/inbox',
+		{  
+			path: '/main/messageindex/mail/inbox', //收件箱
 			name: 'Inbox',
 			component: Inbox
 		},
@@ -202,11 +205,6 @@ export default new Router({
 			path: '/main/codeto/people',
 			name: 'People',
 			component: People
-		},
-		{
-			path: '/main/code',
-			name: 'Code',
-			component: Code
 		}
 	]
 })

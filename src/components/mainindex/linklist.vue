@@ -1,9 +1,9 @@
 <template>
 	<ul class="linklist">
-			<li>
+			<router-link :to="{name:'Inbox',params: { fromPage: 'index' }}" tag="li">
 				<img class="icon-png" src="../../assets/mainapp/mail.png"></img>
-				<span class="text">邮件</span>
-			</li>
+				<span class="text">收件箱</span>
+			</router-link>
 			<li>
 				<img class="icon-png" src="../../assets/mainapp/report.png"></img>
 				<span class="text">日报</span>

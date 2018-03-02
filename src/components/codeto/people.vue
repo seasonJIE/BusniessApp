@@ -2,11 +2,11 @@
 	<div class="people">
 		<div class="header">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<router-link to="/main/mine/mycode" class="code"></router-link>
+			<!--<router-link to="/main/mine/mycode" class="code"></router-link>-->
 			<div class="top">
-				<img src="../../assets/head2.png" />
-				<p>王玮</p>
-				<p class="job">信息中心运维科</p>
+				<img src="../../assets/head_code.jpg" />
+				<p>冯志欣</p>
+				<p class="job">烟草软件部</p>
 			</div>
 			<div class="btn_div">
 				<div>
@@ -51,45 +51,50 @@
 		data() {
 			return {
 				option1: {
-					series: [{
-						name: '个人能力分析',
-						type: 'pie',
-						radius: [5, '65%'],
-						center: ['50%', '50%'],
-						roseType: 'area',
-						data: [{
-								value: 10,
-								name: '个人修养'
+					radar: {
+						shape: 'circle',
+						center: ['50%','50%'],
+						radius: '70%',
+						indicator: [{
+								name: '个人修养',
+								max: 100
 							},
 							{
-								value: 5,
-								name: '创新能力'
+								name: '创新能力',
+								max: 100
 							},
 							{
-								value: 15,
-								name: '工作态度'
+								name: '工作态度',
+								max: 100
 							},
 							{
-								value: 25,
-								name: '抗压能力'
+								name: '工作压力',
+								max: 100
 							},
 							{
-								value: 20,
-								name: '自我管理能力'
+								name: '自我管理能力',
+								max: 100
 							},
 							{
-								value: 35,
-								name: '沟通能力'
+								name: '沟通能力',
+								max: 100
 							},
 							{
-								value: 30,
-								name: '工作效率'
+								name: '工作效率',
+								max: 100
 							},
 							{
-								value: 40,
-								name: '问题解决能力'
+								name: '问题解决能力',
+								max: 100
 							}
 						]
+					},
+					series: [{
+						name: '个人能力分析',
+						type: 'radar',
+						data: [{
+							value: [90, 89, 99, 92, 100, 90, 88, 93],
+						}]
 					}]
 				},
 				option2: {

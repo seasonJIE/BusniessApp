@@ -29,7 +29,7 @@
 						<img class="headimg" src="../../../assets/head2.png" />
 						<div class="right">
 							<p>
-								<span class="name">王伟</span><span class="time">10:37</span>
+								<span class="name">王玮</span><span class="time">10:37</span>
 							</p>
 							<p>坚守在第一战线。</p>
 							<div class="img_div">

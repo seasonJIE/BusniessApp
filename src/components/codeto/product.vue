@@ -2,7 +2,7 @@
 	<div class="product">
 		<div class="header">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<router-link to="/main/mine/mycode" class="code"></router-link>
+			<!--<router-link to="/main/mine/mycode" class="code"></router-link>-->
 			<div class="top">
 				<img src="../../assets/product.png" />
 				<p>中华（硬盒）</p>

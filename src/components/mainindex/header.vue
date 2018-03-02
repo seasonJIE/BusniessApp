@@ -45,25 +45,23 @@
 			overflow:hidden;
 			height:1.9rem;
 			.icon_btn {
-				margin-top:0.45rem;
-				padding-right: 0.5rem;
-				padding-left: 0.5rem;
+				/*margin-top:0.45rem;*/
+				padding:1rem;
 				font-size: 1.2rem;
 				position: relative;
 				z-index: 20;
-				padding-top: 0.5rem;
-				padding-bottom: 0.5rem;
+				
 				
 				&.hot {
 					float: left;
-					background: url(../../assets/icon/hot-icon.png) no-repeat center;
-					background-size: 100%;
+					background: url(../../assets/icon/hot-icon.png) no-repeat center 0.45rem;
+					background-size: 1rem;
 				}
 				
 				&.plus {
 					float: right;
-					background: url(../../assets/icon/plus-icon.png) no-repeat center;
-					background-size: 100%;
+					background: url(../../assets/icon/plus-icon.png) no-repeat center 0.45rem;
+					background-size: 1rem;
 				}
 			}
 			.search_btn {

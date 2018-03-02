@@ -2,7 +2,7 @@
 	<div class="materiel">
 		<div class="header">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<router-link to="/main/mine/mycode" class="code"></router-link>
+			<!--<router-link to="/main/mine/mycode" class="code"></router-link>-->
 			<div class="top">
 				<img src="../../assets/materiel.png" />
 				<p>2011四川烤烟 混打片烟 X21 纸箱</p>

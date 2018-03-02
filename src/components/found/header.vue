@@ -80,7 +80,6 @@
 			position: absolute;
 			left: 2rem;
 			right: 2rem;
-			height: 100%;
 			list-style: none;
 			display: flex;
 			justify-content: center;

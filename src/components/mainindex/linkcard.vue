@@ -50,12 +50,7 @@
 		name: 'Linkcard',
 		data() {
 			return {
-				
 				option1: {
-					tooltip: {
-						trigger: 'item',
-						formatter: "{a} <br/>{b} : {c} ({d}%)"
-					},
 					legend: {
 						orient: 'vertical',
 						itemWidth:10,
@@ -63,9 +58,14 @@
 						right: '3%',
 						data: ['硬盒', '条盒', '纸箱', '内装纸', '内衬纸','薄膜','滤棒']
 					},
+					animation: false,
 					series: [{
 						name: '辅料库存情况',
 						type: 'pie',
+						calculable : false,
+						clickable:false,
+						selectedMode:false,
+						hoverAnimation:false,
 						radius: '60%',
 						center: ['40%', '50%'],
 						data: [{
@@ -187,7 +187,7 @@
 				height: 8rem;
 			}
 			.echarts_div {
-				z-index: 1;
+				z-index: 0;
 				box-sizing: content-box;
 				padding-bottom: 0.6rem;
 			}
