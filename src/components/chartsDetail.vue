@@ -59,11 +59,7 @@
 		name: 'ChartsDetail',
 		data() {
 			return {
-				option: {
-					title: {
-						text: 'ECharts 入门示例'
-					},
-					tooltip: {},
+				option:{
 					legend: {
 						data: ['销量']
 					},

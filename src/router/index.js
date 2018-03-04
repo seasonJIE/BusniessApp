@@ -8,6 +8,8 @@ import Mainindex from 'components/mainindex/mainindex'
 import IndexSearch from 'components/mainindex/search'
 import ChartsDetail from 'components/mainindex/chartsDetail'
 import AllApp from 'components/mainindex/allApp'
+import PreWarning from 'components/pre-warning/pre-warning'
+
 import Messageindex from 'components/messageindex/messageindex'
 import Message from 'components/messageindex/message/message'
 import Mail from 'components/messageindex/mail/mail'
@@ -24,6 +26,7 @@ import News from 'components/found/news/news'
 import NewsDetail from 'components/found/news/newsDetail'
 import Activity from 'components/found/activity/activity'
 import Workring from 'components/found/workring/workring'
+import PartyBuilding from 'components/found/party-building/party-building'
 import Mine from 'components/mine/mine'
 import MyCode from 'components/mine/mycode'
 import PersonalFile from 'components/mine/personalFile'
@@ -60,7 +63,12 @@ export default new Router({
 					component: Mainindex,
 					children:[{
 						path: 'allapp',
+						name: 'AllApp',
 						component: AllApp,
+					},
+					{
+						path: 'pre-warning', //预报预警
+						component: PreWarning,
 					}]
 				},
 				{
@@ -96,7 +104,7 @@ export default new Router({
 					name: 'Found',
 					component: Found,
 					redirect: {
-						name: 'News'
+						name: 'PartyBuilding'
 					},
 					children: [{
 						path: 'news',
@@ -112,6 +120,11 @@ export default new Router({
 						path: 'workring',
 						name: 'Workring',
 						component: Workring
+					},
+					{
+						path: 'party-building',
+						name: 'PartyBuilding',
+						component: PartyBuilding
 					}]
 				},
 				{

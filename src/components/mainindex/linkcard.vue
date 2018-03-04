@@ -36,6 +36,21 @@
 			<!--<div id="echart_div" class="echarts_div" ref='mychart2'></div>-->
 			<img class="testimg"style="height: 10rem;" src="../../assets/s2.jpg" />
 		</div>
+		<div class="card">
+			<p class="title">中华（听装）销量占比情况20180210～0223</p>
+			<!--<div id="echart_div" class="echarts_div" ref='mychart2'></div>-->
+			<img class="testimg"style="height: 10rem;" src="../../assets/s4.jpg" />
+		</div>
+		<div class="card">
+			<p class="title">中华（硬）价格销售趋势</p>
+			<!--<div id="echart_div" class="echarts_div" ref='mychart2'></div>-->
+			<img class="testimg"style="height: 10rem;" src="../../assets/s5.jpg" />
+		</div>
+		<div class="card">
+			<p class="title">2018工业销售目标13000箱</p>
+			<!--<div id="echart_div" class="echarts_div" ref='mychart2'></div>-->
+			<img class="testimg"style="height: 10rem;" src="../../assets/s6.jpg" />
+		</div>
 		
 		<a class="user-defined">
 			<span></span>

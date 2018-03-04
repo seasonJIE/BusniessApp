@@ -4,10 +4,14 @@
 				<img class="icon-png" src="../../assets/mainapp/mail.png"></img>
 				<span class="text">收件箱</span>
 			</router-link>
-			<li>
+			<!--<li>
 				<img class="icon-png" src="../../assets/mainapp/report.png"></img>
 				<span class="text">日报</span>
-			</li>
+			</li>-->
+			<router-link to="mainindex/pre-warning" tag="li">
+				<img class="icon-png" src="../../assets/mainapp/report.png"></img>
+				<span class="text">预警预报</span>
+			</router-link>
 			<li>
 				<img class="icon-png" src="../../assets/mainapp/gongzi.png"></img>
 				<span class="text">工资</span>

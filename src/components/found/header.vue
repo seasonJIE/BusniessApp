@@ -2,6 +2,9 @@
 	<div class="header">
 		<a class="btn left_btn" v-if="typeobj.leftShow" :class="typeobj.leftclassobj"></a>
 		<div class="tab">
+			<router-link to="/main/found/party-building" @click.native="btnchange">
+				党建
+			</router-link>
 			<router-link to="/main/found/news" @click.native="btnchange">
 				新闻<span class="mui-badge" v-if="false">9</span>
 			</router-link>
@@ -39,6 +42,10 @@
 				activity: {
 					leftShow: false,
 					rightShow: false
+				},
+				partyBuilding: {
+					leftShow: false,
+					rightShow: false
 				}
 			}
 		},
@@ -55,6 +62,9 @@
 						this.typeobj = this.workring;
 						break;
 					case 'Activity':
+						this.typeobj = this.activity;
+						break;
+					case 'PartyBuilding':
 						this.typeobj = this.activity;
 						break;
 				}

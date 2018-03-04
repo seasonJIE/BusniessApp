@@ -7,7 +7,6 @@
 				<linklist></linklist>
 				<linkcard></linkcard>
 			</div>
-
 		</div>
 		<hot></hot>
 		<transition name="slide">
